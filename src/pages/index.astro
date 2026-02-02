@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 
 // Тук можем да дефинираме малко данни, за да не ги хардкодваме долу
 const features = [
@@ -29,10 +30,10 @@ const features = [
 				Преобразете пространството си с нашите премиум щори по индивидуален размер. Комфорт и стил, които заслужавате.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition transform hover:-translate-y-1 shadow-lg hover:shadow-blue-500/30">
+				<a href={`${base}/#contact`} class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition transform hover:-translate-y-1 shadow-lg hover:shadow-blue-500/30">
 					Заяви безплатен оглед
 				</a>
-				<a href="#models" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold py-4 px-10 rounded-full transition border border-white/30">
+				<a href={`${base}/#models`} class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold py-4 px-10 rounded-full transition border border-white/30">
 					Разгледай моделите
 				</a>
 			</div>
@@ -103,7 +104,7 @@ const features = [
 
         <div class="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
             
-            <a href="/models/roman" class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl block cursor-pointer">
+            <a href={`${base}/models/roman`} class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl block cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Римски щори" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
                     <div>
@@ -113,21 +114,21 @@ const features = [
                 </div>
             </a>
 
-            <a href="/models/wooden" class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
+            <a href={`${base}/models/wooden`} class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Дървени щори" />
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
                     <span class="text-white font-semibold">Дървени венециански</span>
                 </div>
             </a>
             
-            <a href="/models/plise" class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
+            <a href={`${base}/models/plise`} class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Плисе щори" />
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
                     <span class="text-white font-semibold">Модерни плисета</span>
                 </div>
             </a>
 
-            <a href="/models/vertical" class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
+            <a href={`${base}/models/vertical`} class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Вертикални щори" />
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
                     <span class="text-white font-semibold">Вертикални за офис</span>
@@ -149,7 +150,7 @@ const features = [
 
 			<div class="flex flex-col md:flex-row gap-4 h-200 md:h-150 w-full">
 				
-				<a href="/models/roman" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+				<a href={`${base}/models/roman`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
 						src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
@@ -172,7 +173,7 @@ const features = [
 					</div>
 				</a>
 
-				<a href="/models/wooden" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+				<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
 						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
@@ -188,7 +189,7 @@ const features = [
 					</div>
 				</a>
 
-				<a href="/models/plise" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+				<a href={`${base}/models/plise`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
 						src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?q=80&w=1200&auto=format&fit=crop" 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
@@ -204,7 +205,7 @@ const features = [
 					</div>
 				</a>
 
-                <a href="/models/vertical" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+                <a href={`${base}/models/vertical`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
 						src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?q=80&w=1200&auto=format&fit=crop" 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
@@ -243,7 +244,7 @@ const features = [
 			<div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 				
 				<div class="product-item group" data-category="interior">
-					<a href="/models/roman" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+					<a href={`${base}/models/roman`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
 						<div class="relative h-64 overflow-hidden">
 							<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Римски щори">
 							<span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">ТОП ИЗБОР</span>
@@ -260,7 +261,7 @@ const features = [
 				</div>
 
 				<div class="product-item group" data-category="exterior">
-					<a href="/models/exterior" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+					<a href={`${base}/models/exterior`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
 						<div class="relative h-64 overflow-hidden">
 							<img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Външни ролетни">
 						</div>
@@ -276,7 +277,7 @@ const features = [
 				</div>
 
 				<div class="product-item group" data-category="interior">
-					<a href="/models/wooden" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+					<a href={`${base}/models/wooden`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
 						<div class="relative h-64 overflow-hidden">
 							<img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Дървени щори">
 						</div>
@@ -292,7 +293,7 @@ const features = [
 				</div>
 
 				<div class="product-item group" data-category="smart">
-					<a href="/models/smart" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+					<a href={`${base}/models/smart`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
 						<div class="relative h-64 overflow-hidden">
 							<img src="https://images.unsplash.com/photo-1558002038-1091a1661729?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Умни щори">
 							<span class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">SMART</span>
@@ -309,7 +310,7 @@ const features = [
 				</div>
 
                  <div class="product-item group" data-category="interior">
-					<a href="/models/plise" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+					<a href={`${base}/models/plise`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
 						<div class="relative h-64 overflow-hidden">
 							<img src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Плисе щори">
 						</div>
@@ -325,7 +326,7 @@ const features = [
 				</div>
 
                  <div class="product-item group" data-category="exterior">
-					<a href="/models/exterior" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+					<a href={`${base}/models/exterior`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
 						<div class="relative h-64 overflow-hidden">
 							<img src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Външни жалюзи">
 						</div>

@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 
 // 2. Взимане на данните за текущия продукт
 const { product } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title={`${product.name} | ЛуксБлайндс`}>
@@ -19,9 +20,9 @@ const { product } = Astro.props;
   <div class="container mx-auto px-6 py-12 md:py-20">
     
     <nav class="text-sm text-slate-500 mb-8">
-      <a href="/" class="hover:text-blue-600">Начало</a> 
+      <a href={`${base}`} class="hover:text-blue-600">Начало</a> 
       <span class="mx-2">/</span>
-      <a href={`/models/${product.category}`} class="hover:text-blue-600 capitalize">Категория</a>
+      <a href={`${base}/models/${product.category}`} class="hover:text-blue-600 capitalize">Категория</a>
       <span class="mx-2">/</span>
       <span class="text-slate-800 font-semibold">{product.name}</span>
     </nav>
@@ -71,7 +72,7 @@ const { product } = Astro.props;
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/#contact" class="flex-1 bg-slate-900 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg transform active:scale-95">
+          <a href={`${base}/#contact`} class="flex-1 bg-slate-900 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg transform active:scale-95">
             Заяви безплатен оглед
           </a>
           <a href="tel:0888123456" class="flex-1 border-2 border-slate-200 text-slate-700 text-center py-4 rounded-xl font-bold hover:border-blue-600 hover:text-blue-600 transition">
