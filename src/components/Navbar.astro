@@ -1,0 +1,58 @@
+---
+const links = [
+  { name: "Начало", href: "#" },
+  { name: "Модели", href: "#models" },
+  { name: "Контакти", href: "#contact" },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <a href="#" class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+      <span class="text-blue-600 text-3xl">✦</span> ЛуксБлайндс
+    </a>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      {links.map(link => (
+        <a 
+          href={link.href} 
+          class="text-slate-600 hover:text-blue-600 font-medium transition duration-200"
+        >
+          {link.name}
+        </a>
+      ))}
+      <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-md hover:shadow-lg">
+        Обади се
+      </a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-slate-800 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-full shadow-xl">
+    <div class="flex flex-col p-6 gap-4">
+      {links.map(link => (
+        <a 
+          href={link.href} 
+          class="text-lg text-slate-700 hover:text-blue-600 font-medium border-b border-slate-50 pb-2"
+        >
+          {link.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

@@ -1,0 +1,253 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Тук можем да дефинираме малко данни, за да не ги хардкодваме долу
+const features = [
+  { title: "Прецизни размери", desc: "Безплатен оглед и вземане на размери с точност до милиметър.", icon: "M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" },
+  { title: "Премиум материали", desc: "Работим само с доказани европейски производители на тъкани и механизми.", icon: "M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" },
+  { title: "Бърз монтаж", desc: "Чист и професионален монтаж в удобно за вас време, без излишен хаос.", icon: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" },
+];
+---
+
+<Layout title="ЛуксБлайндс - Елегантни решения за вашия дом">
+	
+	<section class="relative h-[80vh] min-h-150 flex items-center justify-center overflow-hidden">
+		<div class="absolute inset-0 z-0">
+			<img 
+				src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+				alt="Модерни щори в хол" 
+				class="w-full h-full object-cover scale-105 animate-slow-zoom" 
+			/>
+			<div class="absolute inset-0 bg-linear-to-r from-slate-900/80 to-slate-900/40"></div>
+		</div>
+
+		<div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+			<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight drop-shadow-lg">
+				Съвършена светлина <br/> във вашия дом.
+			</h1>
+			<p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-2xl mx-auto font-light">
+				Преобразете пространството си с нашите премиум щори по индивидуален размер. Комфорт и стил, които заслужавате.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition transform hover:-translate-y-1 shadow-lg hover:shadow-blue-500/30">
+					Заяви безплатен оглед
+				</a>
+				<a href="#models" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold py-4 px-10 rounded-full transition border border-white/30">
+					Разгледай моделите
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-20 bg-white">
+		<div class="container mx-auto px-6">
+			<div class="grid md:grid-cols-3 gap-12 text-center">
+				{features.map(feature => (
+					<div class="group p-8 rounded-2xl hover:bg-slate-50 transition duration-300">
+						<div class="w-16 h-16 mx-auto mb-6 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+								<path stroke-linecap="round" stroke-linejoin="round" d={feature.icon} />
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-slate-800 mb-4">{feature.title}</h3>
+						<p class="text-slate-600 leading-relaxed">{feature.desc}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- <section id="models" class="py-20 bg-slate-100">
+		<div class="container mx-auto px-6">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold text-slate-900 mb-4">Нашите реализации</h2>
+				<p class="text-xl text-slate-600 max-w-2xl mx-auto">Част от проектите, с които се гордеем. Внимание към всеки детайл.</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
+				
+				<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl">
+					<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Римски щори" />
+					<div class="absolute inset-0 bg-linear-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+						<span class="text-white text-2xl font-bold">Римски щори в спалня</span>
+					</div>
+				</div>
+
+				<div class="relative group overflow-hidden rounded-2xl shadow-lg">
+					<img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Дървени щори" />
+					<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition p-6 flex items-end"><span class="text-white font-semibold">Дървени венециански</span></div>
+				</div>
+				
+				<div class="relative group overflow-hidden rounded-2xl shadow-lg">
+					<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Плисе щори" />
+					<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition p-6 flex items-end"><span class="text-white font-semibold">Модерни плисета</span></div>
+				</div>
+
+				<div class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
+					<img src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Вертикални щори" />
+					<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition p-6 flex items-end"><span class="text-white font-semibold">Ден и Нощ за хол</span></div>
+				</div>
+
+			</div>
+		</div>
+	</section> -->
+
+	<!-- <section id="models" class="py-20 bg-slate-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Нашите реализации</h2>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Изберете категория, за да видите модели и цени.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
+            
+            <a href="/models/roman" class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Римски щори" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                    <div>
+                        <span class="text-white text-3xl font-bold block">Римски щори</span>
+                        <span class="text-blue-300 text-sm font-semibold uppercase tracking-wider mt-2 block">Разгледай модели →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/models/wooden" class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Дървени щори" />
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
+                    <span class="text-white font-semibold">Дървени венециански</span>
+                </div>
+            </a>
+            
+            <a href="/models/plise" class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Плисе щори" />
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
+                    <span class="text-white font-semibold">Модерни плисета</span>
+                </div>
+            </a>
+
+            <a href="/models/vertical" class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Вертикални щори" />
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
+                    <span class="text-white font-semibold">Вертикални за офис</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section> -->
+
+	<section id="contact" class="py-24 bg-slate-900 text-white text-center px-6 relative overflow-hidden">
+		<div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+		
+		<div class="relative z-10 max-w-3xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Готови ли сте да промените дома си?</h2>
+			<p class="text-xl text-slate-300 mb-12 leading-relaxed">
+				Не губете време в чудене. Свържете се с нас днес за безплатна консултация и вземане на размери на място.
+			</p>
+			<button class="bg-blue-500 hover:bg-blue-600 text-white font-bold text-xl py-5 px-12 rounded-full transition transform hover:scale-105 shadow-2xl hover:shadow-blue-500/50">
+				📞 Обади се сега: 0888 123 456
+			</button>
+			<p class="mt-6 text-slate-400">Или ни пишете на имейл за оферта.</p>
+		</div>
+	</section>
+	<section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full bg-blue-600/10 skew-x-12 transform origin-bottom"></div>
+
+		<div class="container mx-auto px-6 relative z-10">
+			<div class="grid md:grid-cols-2 gap-16 items-center">
+				
+				<div>
+					<h2 class="text-4xl font-bold mb-6">Свържете се с нас</h2>
+					<p class="text-slate-400 text-lg mb-8">
+						Искате оферта или консултация? Попълнете формата и ще се свържем с вас до 24 часа за уговаряне на безплатен оглед.
+					</p>
+					
+					<div class="space-y-6">
+						<div class="flex items-center gap-4">
+							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📞</div>
+							<div>
+								<p class="text-slate-400 text-sm">Телефон за връзка</p>
+								<p class="text-xl font-bold">0888 123 456</p>
+							</div>
+						</div>
+						
+						<div class="flex items-center gap-4">
+							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📧</div>
+							<div>
+								<p class="text-slate-400 text-sm">Имейл адрес</p>
+								<p class="text-xl font-bold">sales@luxblinds.bg</p>
+							</div>
+						</div>
+
+                        <div class="flex items-center gap-4">
+							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📍</div>
+							<div>
+								<p class="text-slate-400 text-sm">Локация</p>
+								<p class="text-xl font-bold">гр. София и региона</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white p-8 rounded-2xl shadow-2xl text-slate-800">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+						<div>
+							<label class="block text-sm font-semibold text-slate-600 mb-1">Име</label>
+							<input type="text" name="name" required placeholder="Иван Петров" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+						</div>
+
+						<div>
+							<label class="block text-sm font-semibold text-slate-600 mb-1">Телефон</label>
+							<input type="tel" name="phone" required placeholder="088X XXX XXX" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+						</div>
+
+						<div>
+							<label class="block text-sm font-semibold text-slate-600 mb-1">Какво ви интересува?</label>
+							<select name="service" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+								<option>Искам безплатен оглед</option>
+								<option>Римски щори</option>
+								<option>Дървени щори</option>
+								<option>Външни ролетни щори</option>
+								<option>Друго</option>
+							</select>
+						</div>
+
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+						<button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition transform hover:scale-[1.02] shadow-lg">
+							ИЗПРАТИ ЗАПИТВАНЕ
+						</button>
+                        
+                        <p class="text-xs text-slate-400 text-center mt-4">Данните ви са защитени и няма да бъдат споделяни.</p>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Влез в сайта Web3Forms Create Key.
+
+1.Напиши своя имейл (където искаш да получаваш запитванията).
+
+2.Ще получиш Access Key на имейла си веднага.
+
+3.Копирай този ключ.
+
+4.Върни се в кода горе и намери реда: <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+5.		Замени YOUR_ACCESS_KEY_HERE с ключа, който получи по пощата. -->
+
+</Layout>
+
+<style>
+	@keyframes slow-zoom {
+		0% { transform: scale(1); }
+		100% { transform: scale(1.1); }
+	}
+	.animate-slow-zoom {
+		animation: slow-zoom 20s infinite alternate linear;
+	}
+</style>

@@ -1,0 +1,27 @@
+---
+import '../styles/global.css'
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+---
+
+<!doctype html>
+<html lang="bg" class="scroll-smooth scroll-pt-24">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Качествени щори и сенници за вашия дом и офис." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+		<Navbar />
+        <slot /> <footer class="bg-slate-900 text-slate-400 py-8 text-center">
+            <p>© 2024 ЛуксБлайндс ЕООД. Всички права запазени.</p>
+        </footer>
+	</body>
+</html>
