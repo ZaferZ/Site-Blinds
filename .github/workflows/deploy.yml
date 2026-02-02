@@ -1,10 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Стартирай при качване на код в 'main' клона
   push:
     branches: [ main ]
-  # Позволява ръчно пускане от таба Actions
   workflow_dispatch:
 
 permissions:
@@ -17,7 +15,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BUILD_PATH: "." # Пътят към твоя проект (остави точка, ако е в главната папка)
+  # ПРОМЯНА: Слагаме точка ".", защото файловете ти са най-отгоре
+  BUILD_PATH: "."
 
 jobs:
   build:
@@ -57,10 +56,10 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
 
       - name: Build with Astro
+        # ПРОМЯНА: Махнахме --site и --base флаговете. 
+        # Astro ще си ги вземе само от config файла.
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+          ${{ steps.detect-package-manager.outputs.runner }} astro build
         working-directory: ${{ env.BUILD_PATH }}
 
       - name: Upload artifact
