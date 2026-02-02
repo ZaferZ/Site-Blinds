@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://zaferz.github.io', 
   
-  base: '/site-blinds',
+  base: '/Site-Blinds',
     vite: {
     plugins: [tailwindcss()]
   }
