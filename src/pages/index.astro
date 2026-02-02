@@ -13,11 +13,11 @@ const features = [
 	
 	<section class="relative h-[80vh] min-h-150 flex items-center justify-center overflow-hidden">
 		<div class="absolute inset-0 z-0">
-			<img 
-				src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-				alt="Модерни щори в хол" 
-				class="w-full h-full object-cover scale-105 animate-slow-zoom" 
-			/>
+				<img 
+					src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+					alt="Модерни щори в хол" 
+					class="w-full h-full object-cover scale-105 animate-slow-zoom" 
+				/>
 			<div class="absolute inset-0 bg-linear-to-r from-slate-900/80 to-slate-900/40"></div>
 		</div>
 
@@ -58,6 +58,7 @@ const features = [
 	</section>
 
 	<!-- <section id="models" class="py-20 bg-slate-100">
+
 		<div class="container mx-auto px-6">
 			<div class="text-center mb-16">
 				<h2 class="text-4xl font-bold text-slate-900 mb-4">Нашите реализации</h2>
@@ -92,10 +93,11 @@ const features = [
 		</div>
 	</section> -->
 
-	<!-- <section id="models" class="py-20 bg-slate-100">
+	<!-- Models v1 -->
+	 <section id="models" class="py-20 bg-slate-100">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4">Нашите реализации</h2>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Нашите реализации Вариянт 1</h2>
             <p class="text-xl text-slate-600 max-w-2xl mx-auto">Изберете категория, за да видите модели и цени.</p>
         </div>
 
@@ -103,7 +105,7 @@ const features = [
             
             <a href="/models/roman" class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl block cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Римски щори" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
                     <div>
                         <span class="text-white text-3xl font-bold block">Римски щори</span>
                         <span class="text-blue-300 text-sm font-semibold uppercase tracking-wider mt-2 block">Разгледай модели →</span>
@@ -134,8 +136,249 @@ const features = [
 
         </div>
     </div>
-</section> -->
+</section>
 
+<!-- Models v2 -->
+<section id="models" class="py-24 bg-slate-50 overflow-hidden">
+		<div class="container mx-auto px-6 h-full">
+			
+			<div class="text-center mb-12">
+				<h2 class="text-4xl font-bold text-slate-900">Вариянт 2</h2>
+				<p class="text-slate-500 mt-2">Посочете модел, за да разгледате детайлите</p>
+			</div>
+
+			<div class="flex flex-col md:flex-row gap-4 h-200 md:h-150 w-full">
+				
+				<a href="/models/roman" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Римски щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 opacity-0 group-hover:opacity-100 transition delay-100 duration-500">
+							НАЙ-ТЪРСЕНИ
+						</div>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Римски <br/> щори</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Меки тъкани и домашен уют. Разгледай 15+ цвята.
+						</p>
+						
+						<div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">
+							➞
+						</div>
+					</div>
+				</a>
+
+				<a href="/models/wooden" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Дървени щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Естествен дъб и бамбук за премиум визия.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
+
+				<a href="/models/plise" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Плисе щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Плисе <br/> "Ден и Нощ"</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Компактни и енергоефективни решения.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
+
+                <a href="/models/vertical" class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Вертикални щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вертикални <br/> щори</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Перфектни за офиси и френски прозорци.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
+
+			</div>
+		</div>
+	</section>
+
+<!-- Models v3 -->
+	<section id="models" class="py-24 bg-white">
+		<div class="container mx-auto px-6">
+			
+			<div class="text-center mb-12">
+				<h2 class="text-4xl font-bold text-slate-900 mb-4">Вариянт 3</h2>
+				<p class="text-slate-500 max-w-2xl mx-auto">Разполагаме с решения за всеки тип прозорец. Използвайте филтрите, за да намерите бързо това, което търсите.</p>
+			</div>
+
+			<div class="flex flex-wrap justify-center gap-4 mb-12">
+				<button class="filter-btn active bg-slate-900 text-white px-6 py-2 rounded-full font-medium transition hover:shadow-lg" data-filter="all">Всички</button>
+				<button class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-6 py-2 rounded-full font-medium transition" data-filter="interior">Вътрешни</button>
+				<button class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-6 py-2 rounded-full font-medium transition" data-filter="exterior">Външни</button>
+				<button class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-6 py-2 rounded-full font-medium transition" data-filter="smart">Електрически</button>
+			</div>
+
+			<div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+				
+				<div class="product-item group" data-category="interior">
+					<a href="/models/roman" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+						<div class="relative h-64 overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Римски щори">
+							<span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">ТОП ИЗБОР</span>
+						</div>
+						<div class="p-6">
+							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Римски щори</h3>
+							<p class="text-sm text-slate-500 mt-2">Текстилен уют за дома</p>
+							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
+								<span class="text-slate-400 text-sm">от 45 лв/м²</span>
+								<span class="text-blue-600 font-bold">Виж →</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="product-item group" data-category="exterior">
+					<a href="/models/exterior" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+						<div class="relative h-64 overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Външни ролетни">
+						</div>
+						<div class="p-6">
+							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Външни ролетни</h3>
+							<p class="text-sm text-slate-500 mt-2">Сигурност и изолация</p>
+							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
+								<span class="text-slate-400 text-sm">от 120 лв/м²</span>
+								<span class="text-blue-600 font-bold">Виж →</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="product-item group" data-category="interior">
+					<a href="/models/wooden" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+						<div class="relative h-64 overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Дървени щори">
+						</div>
+						<div class="p-6">
+							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Дървени щори</h3>
+							<p class="text-sm text-slate-500 mt-2">Естествен материал</p>
+							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
+								<span class="text-slate-400 text-sm">от 80 лв/м²</span>
+								<span class="text-blue-600 font-bold">Виж →</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="product-item group" data-category="smart">
+					<a href="/models/smart" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+						<div class="relative h-64 overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1558002038-1091a1661729?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Умни щори">
+							<span class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">SMART</span>
+						</div>
+						<div class="p-6">
+							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Smart Home Щори</h3>
+							<p class="text-sm text-slate-500 mt-2">Управление с телефон</p>
+							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
+								<span class="text-slate-400 text-sm">По запитване</span>
+								<span class="text-blue-600 font-bold">Виж →</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+                 <div class="product-item group" data-category="interior">
+					<a href="/models/plise" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+						<div class="relative h-64 overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Плисе щори">
+						</div>
+						<div class="p-6">
+							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Плисе щори</h3>
+							<p class="text-sm text-slate-500 mt-2">За нестандартни прозорци</p>
+							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
+								<span class="text-slate-400 text-sm">от 55 лв/м²</span>
+								<span class="text-blue-600 font-bold">Виж →</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+                 <div class="product-item group" data-category="exterior">
+					<a href="/models/exterior" class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
+						<div class="relative h-64 overflow-hidden">
+							<img src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Външни жалюзи">
+						</div>
+						<div class="p-6">
+							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Външни жалюзи</h3>
+							<p class="text-sm text-slate-500 mt-2">Прецизен контрол на светлината</p>
+							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
+								<span class="text-slate-400 text-sm">от 180 лв/м²</span>
+								<span class="text-blue-600 font-bold">Виж →</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.product-item');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 1. Смяна на активния бутон (цветове)
+                buttons.forEach(btn => {
+                    btn.classList.remove('bg-slate-900', 'text-white');
+                    btn.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                button.classList.remove('bg-slate-100', 'text-slate-600');
+                button.classList.add('bg-slate-900', 'text-white');
+
+                // 2. Филтриране на елементите
+                const category = button.getAttribute('data-filter');
+
+				items.forEach(item => {
+					const htmlItem = item as HTMLElement;
+
+					if (category === 'all' || item.getAttribute('data-category') === category) {
+						htmlItem.style.display = 'block';
+						htmlItem.animate([
+							{ opacity: 0, transform: 'scale(0.95)' },
+							{ opacity: 1, transform: 'scale(1)' }
+						], { duration: 300, fill: 'forwards' });
+					} else {
+						htmlItem.style.display = 'none';
+					}
+				});
+            });
+        });
+    </script>
+
+	<!-- Contatct Section -->
 	<section id="contact" class="py-24 bg-slate-900 text-white text-center px-6 relative overflow-hidden">
 		<div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 		
@@ -159,74 +402,80 @@ const features = [
 				<div>
 					<h2 class="text-4xl font-bold mb-6">Свържете се с нас</h2>
 					<p class="text-slate-400 text-lg mb-8">
-						Искате оферта или консултация? Попълнете формата и ще се свържем с вас до 24 часа за уговаряне на безплатен оглед.
+						Попълнете формата и ще се свържем с вас до 24 часа.
 					</p>
 					
 					<div class="space-y-6">
 						<div class="flex items-center gap-4">
 							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📞</div>
-							<div>
-								<p class="text-slate-400 text-sm">Телефон за връзка</p>
-								<p class="text-xl font-bold">0888 123 456</p>
-							</div>
+							<div><p class="text-slate-400 text-sm">Телефон</p><p class="text-xl font-bold">0888 123 456</p></div>
 						</div>
-						
 						<div class="flex items-center gap-4">
 							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📧</div>
-							<div>
-								<p class="text-slate-400 text-sm">Имейл адрес</p>
-								<p class="text-xl font-bold">sales@luxblinds.bg</p>
-							</div>
-						</div>
-
-                        <div class="flex items-center gap-4">
-							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📍</div>
-							<div>
-								<p class="text-slate-400 text-sm">Локация</p>
-								<p class="text-xl font-bold">гр. София и региона</p>
-							</div>
+							<div><p class="text-slate-400 text-sm">Имейл</p><p class="text-xl font-bold">sales@luxblinds.bg</p></div>
 						</div>
 					</div>
 				</div>
 
 				<div class="bg-white p-8 rounded-2xl shadow-2xl text-slate-800">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+					<form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
 						<div>
 							<label class="block text-sm font-semibold text-slate-600 mb-1">Име</label>
-							<input type="text" name="name" required placeholder="Иван Петров" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+							<input type="text" name="name" required placeholder="Вашето име" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
 						</div>
 
 						<div>
 							<label class="block text-sm font-semibold text-slate-600 mb-1">Телефон</label>
-							<input type="tel" name="phone" required placeholder="088X XXX XXX" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+							<input type="tel" name="phone" required placeholder="Телефон за връзка" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
 						</div>
 
 						<div>
 							<label class="block text-sm font-semibold text-slate-600 mb-1">Какво ви интересува?</label>
-							<select name="service" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-								<option>Искам безплатен оглед</option>
-								<option>Римски щори</option>
-								<option>Дървени щори</option>
-								<option>Външни ролетни щори</option>
-								<option>Друго</option>
+							<select id="service-select" name="service" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+								<option value="Оглед">Искам безплатен оглед</option>
+								<option value="Римски щори">Римски щори</option>
+								<option value="Дървени щори">Дървени щори</option>
+								<option value="Външни щори">Външни ролетни щори</option>
+                                <option value="Друго">Друго</option>
 							</select>
 						</div>
 
-                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <div id="other-details" class="hidden">
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Моля уточнете:</label>
+                            <textarea name="message" rows="3" placeholder="Напишете детайли за вашето запитване..." class="w-full bg-slate-100 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                        </div>
+
+                         <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
 						<button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition transform hover:scale-[1.02] shadow-lg">
 							ИЗПРАТИ ЗАПИТВАНЕ
 						</button>
-                        
-                        <p class="text-xs text-slate-400 text-center mt-4">Данните ви са защитени и няма да бъдат споделяни.</p>
 					</form>
 				</div>
 
 			</div>
 		</div>
 	</section>
+
+    <script>
+        const selectElement = document.getElementById('service-select');
+        const otherDetails = document.getElementById('other-details');
+
+        // Слушаме за промяна в падащото меню
+        selectElement?.addEventListener('change', (event) => {
+            // @ts-ignore (игнорираме TS грешката за event target value)
+            const value = event.target.value;
+
+            if (value === 'Друго') {
+                otherDetails?.classList.remove('hidden'); // Махаме класа hidden -> полето се показва
+            } else {
+                otherDetails?.classList.add('hidden');    // Слагаме класа hidden -> полето се крие
+            }
+        });
+    </script>
 
 	<!-- Влез в сайта Web3Forms Create Key.
 
@@ -238,7 +487,7 @@ const features = [
 
 4.Върни се в кода горе и намери реда: <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
-5.		Замени YOUR_ACCESS_KEY_HERE с ключа, който получи по пощата. -->
+5.	Замени YOUR_ACCESS_KEY_HERE с ключа, който получи по пощата. -->
 
 </Layout>
 

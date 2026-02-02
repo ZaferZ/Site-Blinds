@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { products } from '../../data/products';
+
+// 1. Генериране на пътища за всички продукти
+export async function getStaticPaths() {
+  return products.map((product) => ({
+    params: { id: product.id },
+    props: { product },
+  }));
+}
+
+// 2. Взимане на данните за текущия продукт
+const { product } = Astro.props;
+---
+
+<Layout title={`${product.name} | ЛуксБлайндс`}>
+  
+  <div class="container mx-auto px-6 py-12 md:py-20">
+    
+    <nav class="text-sm text-slate-500 mb-8">
+      <a href="/" class="hover:text-blue-600">Начало</a> 
+      <span class="mx-2">/</span>
+      <a href={`/models/${product.category}`} class="hover:text-blue-600 capitalize">Категория</a>
+      <span class="mx-2">/</span>
+      <span class="text-slate-800 font-semibold">{product.name}</span>
+    </nav>
+
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+      
+      <div>
+        <div class="aspect-4/3 rounded-2xl overflow-hidden shadow-lg mb-4 bg-slate-100 relative group">
+          <img 
+            id="main-image" 
+            src={product.images[0]} 
+            alt={product.name} 
+            class="w-full h-full object-cover transition duration-500"
+          />
+        </div>
+
+        <div class="flex gap-4 overflow-x-auto pb-2">
+          {product.images.map((img, index) => (
+            <button 
+              class="thumbnail-btn w-24 h-24 shrink-0 rounded-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition focus:border-blue-500 focus:outline-none"
+              data-image={img}
+            >
+              <img src={img} class="w-full h-full object-cover" />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-2">{product.name}</h1>
+        <p class="text-2xl text-blue-600 font-bold mb-6">{product.price}</p>
+        
+        <div class="prose text-slate-600 mb-8 leading-relaxed">
+          <p>{product.description}</p>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-6 mb-8 border border-slate-100">
+          <h3 class="font-bold text-slate-800 mb-4 text-lg">Технически характеристики</h3>
+          <ul class="space-y-3">
+            {Object.entries(product.specs).map(([key, value]) => (
+              <li class="flex justify-between border-b border-slate-200 pb-2 last:border-0">
+                <span class="text-slate-500">{key}:</span>
+                <span class="font-medium text-slate-800">{value}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/#contact" class="flex-1 bg-slate-900 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg transform active:scale-95">
+            Заяви безплатен оглед
+          </a>
+          <a href="tel:0888123456" class="flex-1 border-2 border-slate-200 text-slate-700 text-center py-4 rounded-xl font-bold hover:border-blue-600 hover:text-blue-600 transition">
+            📞 0888 123 456
+          </a>
+        </div>
+        
+        <p class="text-xs text-slate-400 mt-4 text-center">
+          * Цената е ориентировъчна. Точна оферта се изготвя след вземане на размери.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</Layout>
+
+<script>
+  // Използваме 'as HTMLImageElement' (ако си в .ts файл) или просто проверка за тип
+  const mainImage = document.getElementById('main-image');
+  const buttons = document.querySelectorAll('.thumbnail-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newSrc = btn.getAttribute('data-image');
+
+      
+      if (mainImage && mainImage instanceof HTMLImageElement && newSrc) {
+        
+        mainImage.style.opacity = '0.5';
+
+        setTimeout(() => {
+          mainImage.src = newSrc;
+          mainImage.style.opacity = '1';
+        }, 200);
+      }
+    });
+  });
+</script>

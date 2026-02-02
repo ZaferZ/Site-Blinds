@@ -1,108 +1,100 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
-// 1. ДЕФИНИРАНЕ НА ДАННИТЕ
-// Тук описваме всички видове щори и техните цени.
-// В реално приложение това може да идва от база данни, но тук го пишем директно.
+import { products } from '../../data/products'; // Импортираме продуктите
 
 export async function getStaticPaths() {
-  const blindsData = [
-    {
-      slug: 'roman', // Това ще е адресът: /models/roman
-      title: 'Римски щори',
-      description: 'Класика и уют с меки тъкани.',
-      heroImage: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=80',
-      products: [
-        { name: 'Римска щора "Стандарт"', price: '45 лв/кв.м', image: 'https://images.unsplash.com/photo-1505691938895-1758d7bab58d?auto=format&fit=crop&w=600&q=80' },
-        { name: 'Римска щора "Blackout"', price: '65 лв/кв.м', image: 'https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?auto=format&fit=crop&w=600&q=80' },
-        { name: 'Лукс ленена материя', price: '89 лв/кв.м', image: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=600&q=80' },
-      ]
+  // Дефинираме категориите
+  const categories = [
+    { 
+        slug: 'roman', 
+        title: 'Римски щори', 
+        desc: 'Класика и уют.', 
+        hero: 'https://images.unsplash.com/photo-1505691938895-1758d7bab58d?w=1200' 
     },
-    {
-      slug: 'wooden',
-      title: 'Дървени щори',
-      description: 'Естествени материали за топла атмосфера.',
-      heroImage: 'https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80',
-      products: [
-        { name: 'Бамбук Натурал', price: '75 лв/кв.м', image: 'https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?auto=format&fit=crop&w=600&q=80' },
-        { name: 'Масивно дърво (Бял дъб)', price: '120 лв/кв.м', image: 'https://images.unsplash.com/photo-1594040226829-7f251ab46d80?auto=format&fit=crop&w=600&q=80' },
-      ]
+    { 
+        slug: 'wooden', 
+        title: 'Дървени щори', 
+        desc: 'Естествени материали.', 
+        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
     },
-    {
-      slug: 'vertical',
-      title: 'Вертикални щори',
-      description: 'Идеални за офиси и големи прозорци.',
-      heroImage: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=80',
-      products: [
-        { name: 'Текстилни ленти 89мм', price: '25 лв/кв.м', image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80' },
-        { name: 'Алуминиеви вертикални', price: '48 лв/кв.м', image: 'https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=600&q=80' },
-      ]
+       { 
+        slug: 'smart', 
+        title: 'Смарт щори', 
+        desc: 'Интелигентни решения за мързеливи домакини.', 
+        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
     },
-    {
-        slug: 'plise',
-        title: 'Плисе щори',
-        description: 'Модерни и компактни решения.',
-        heroImage: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-        products: [
-            { name: 'Плисе ден и нощ', price: '55 лв/кв.м', image: 'https://images.unsplash.com/photo-1520699918507-3c3e05c46b90?auto=format&fit=crop&w=600&q=80' }
-        ]
-    }
+       { 
+        slug: 'exterior', 
+        title: 'Външни щори', 
+        desc: 'Стилен избор за външни пространства.', 
+        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
+    },
+       { 
+        slug: 'plise', 
+        title: 'Плисе щори', 
+        desc: 'Естествени материали.', 
+        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
+    },
+    // Добави другите категории тук...
   ];
 
-  // Astro връща всички възможни пътища
-  return blindsData.map((category) => {
+  return categories.map((category) => {
+    // Филтрираме само продуктите за тази категория
+    const categoryProducts = products.filter(p => p.category === category.slug);
+    
     return {
       params: { type: category.slug },
-      props: { category },
+      props: { category, products: categoryProducts },
     };
   });
 }
 
-// Взимаме данните за текущата страница
-const { category } = Astro.props;
+const { category, products: categoryProducts } = Astro.props;
 ---
 
 <Layout title={`${category.title} | ЛуксБлайндс`}>
   
   <div class="relative h-[40vh] min-h-75 flex items-center justify-center">
     <div class="absolute inset-0">
-        <img src={category.heroImage} class="w-full h-full object-cover" alt={category.title} />
+        <img src={category.hero} class="w-full h-full object-cover" alt={category.title} />
         <div class="absolute inset-0 bg-slate-900/60"></div>
     </div>
     <div class="relative z-10 text-center text-white p-6">
         <h1 class="text-5xl font-bold mb-4">{category.title}</h1>
-        <p class="text-xl text-slate-200">{category.description}</p>
+        <p class="text-xl text-slate-200">{category.desc}</p>
     </div>
   </div>
 
   <section class="py-16 container mx-auto px-6">
-    
-    <a href="/" class="inline-flex items-center text-blue-600 font-semibold mb-8 hover:underline">
-        ← Обратно към началото
-    </a>
+    <a href="/" class="inline-flex items-center text-blue-600 font-semibold mb-8 hover:underline">← Обратно към началото</a>
 
     <div class="grid md:grid-cols-3 gap-8">
-        {category.products.map((product) => (
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition border border-slate-100 group">
-                <div class="h-64 overflow-hidden">
-                    <img 
-                        src={product.image} 
-                        alt={product.name} 
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                    />
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">{product.name}</h3>
-                    <div class="flex justify-between items-center mt-4">
-                        <span class="text-slate-500 text-sm">Цена от:</span>
-                        <span class="text-blue-600 font-bold text-lg">{product.price}</span>
+        {categoryProducts.length > 0 ? (
+            categoryProducts.map((product) => (
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition border border-slate-100 group flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative">
+                        <img 
+                            src={product.images[0]} 
+                            alt={product.name} 
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                        />
+                        <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                            {product.price}
+                        </div>
                     </div>
-                    <button class="w-full mt-6 bg-slate-900 text-white py-3 rounded-lg hover:bg-blue-600 transition">
-                        Попитай за този модел
-                    </button>
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">{product.name}</h3>
+                        <p class="text-slate-500 text-sm mb-6 grow">{product.shortDesc}</p>
+                        
+                        <a href={`/product/${product.id}`} class="w-full block text-center bg-slate-900 text-white py-3 rounded-lg hover:bg-blue-600 transition">
+                            Виж повече снимки
+                        </a>
+                    </div>
                 </div>
-            </div>
-        ))}
+            ))
+        ) : (
+            <p class="text-slate-500 text-lg col-span-3 text-center">Все още няма добавени продукти в тази категория.</p>
+        )}
     </div>
   </section>
 
