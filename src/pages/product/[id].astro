@@ -33,7 +33,7 @@ const base = import.meta.env.BASE_URL;
         <div class="aspect-4/3 rounded-2xl overflow-hidden shadow-lg mb-4 bg-slate-100 relative group">
           <img 
             id="main-image" 
-            src={product.images[0]} 
+            src={`${base}${product.images[0]}`} 
             alt={product.name} 
             class="w-full h-full object-cover transition duration-500"
           />
@@ -43,9 +43,9 @@ const base = import.meta.env.BASE_URL;
           {product.images.map((img, index) => (
             <button 
               class="thumbnail-btn w-24 h-24 shrink-0 rounded-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition focus:border-blue-500 focus:outline-none"
-              data-image={img}
+              data-image={`${base}${img}`}
             >
-              <img src={img} class="w-full h-full object-cover" />
+              <img src={`${base}${img}`} class="w-full h-full object-cover" />
             </button>
           ))}
         </div>

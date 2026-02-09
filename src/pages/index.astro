@@ -8,9 +8,90 @@ const features = [
   { title: "Премиум материали", desc: "Работим само с доказани европейски производители на тъкани и механизми.", icon: "M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" },
   { title: "Бърз монтаж", desc: "Чист и професионален монтаж в удобно за вас време, без излишен хаос.", icon: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" },
 ];
+	const models = [
+  // 1. Вертикални
+  { 
+    title: "Вертикални", 
+    subtitle: "Текстил и PVC", 
+    img: `${base}/images/vertical/vertical-sample.png`, 
+    link: "vertical" 
+  },
+  
+  // 2. Венециански
+  { 
+    title: "Венециански", 
+    subtitle: "Алуминиеви", 
+    img: "https://images.unsplash.com/photo-1534196163351-402941571474?w=600&q=80", 
+    link: "venetian" 
+  },
+
+  // 3. Плисе
+  { 
+    title: "Плисе", 
+    subtitle: "Стандарт & Ден и Нощ", 
+    img: "https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?w=600&q=80", 
+    link: "plise" 
+  },
+
+  // 4. Дървени
+  { 
+    title: "Дървени", 
+    subtitle: "Естествено дърво", 
+    img: "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=80", 
+    link: "wooden" 
+  },
+
+  // 5. Римски (Тук влизат Делукс, Мини, Макс, Бокс)
+  { 
+    title: "Римски", 
+    subtitle: "Делукс, Макс & Бокс", 
+    img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80", 
+    link: "roman" 
+  },
+
+  // 6. Руло (Тук влизат Кутия, Водачи, Макс)
+  { 
+    title: "Руло щори", 
+    subtitle: "С кутия и водачи", 
+    img: "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?w=600&q=80", 
+    link: "roller" 
+  },
+
+  // 7. Ден и Нощ (Зебра)
+  { 
+    title: "Ден и Нощ", 
+    subtitle: "Стандарт & Макс Бокс", 
+    img: "https://images.unsplash.com/photo-1449824913929-49aa9957296f?w=600&q=80", 
+    link: "day-night" 
+  },
+
+  // 8. Хармония
+  { 
+    title: "Хармония", 
+    subtitle: "Ефирна елегантност", 
+    img: "https://images.unsplash.com/photo-1505691938895-1758d7bab58d?w=600&q=80", 
+    link: "harmony" 
+  },
+
+  // 9. Вертикални Ден и Нощ
+  { 
+    title: "Верт. Ден и Нощ", 
+    subtitle: "Иновация 2 в 1", 
+    img: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=600&q=80", 
+    link: "vertical-day-night" 
+  },
+
+  // 10. Автоматизирани релси
+  { 
+    title: "Ел. Корнизи", 
+    subtitle: "Автоматизация Somfy", 
+    img: "https://images.unsplash.com/photo-1558002038-1091a1661729?w=600&q=80", 
+    link: "motorized" 
+  },
+];
 ---
 
-<Layout title="ЛуксБлайндс - Елегантни решения за вашия дом">
+<Layout title="Rio Homes - Елегантни решения за вашия дом">
 	
 	<section class="relative h-[80vh] min-h-150 flex items-center justify-center overflow-hidden">
 		<div class="absolute inset-0 z-0">
@@ -94,57 +175,13 @@ const features = [
 		</div>
 	</section> -->
 
-	<!-- Models v1 -->
-	 <section id="models" class="py-20 bg-slate-100">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4">Нашите реализации Вариянт 1</h2>
-            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Изберете категория, за да видите модели и цени.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
-            
-            <a href={`${base}/models/roman`} class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl block cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Римски щори" />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                    <div>
-                        <span class="text-white text-3xl font-bold block">Римски щори</span>
-                        <span class="text-blue-300 text-sm font-semibold uppercase tracking-wider mt-2 block">Разгледай модели →</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href={`${base}/models/wooden`} class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Дървени щори" />
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
-                    <span class="text-white font-semibold">Дървени венециански</span>
-                </div>
-            </a>
-            
-            <a href={`${base}/models/plise`} class="relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Плисе щори" />
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
-                    <span class="text-white font-semibold">Модерни плисета</span>
-                </div>
-            </a>
-
-            <a href={`${base}/models/vertical`} class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg block cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Вертикални щори" />
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition p-6 flex items-end">
-                    <span class="text-white font-semibold">Вертикални за офис</span>
-                </div>
-            </a>
-
-        </div>
-    </div>
-</section>
 
 <!-- Models v2 -->
 <section id="models" class="py-24 bg-slate-50 overflow-hidden">
 		<div class="container mx-auto px-6 h-full">
 			
 			<div class="text-center mb-12">
-				<h2 class="text-4xl font-bold text-slate-900">Вариянт 2</h2>
+				<h2 class="text-4xl font-bold text-slate-900">Вариaнт 1</h2>
 				<p class="text-slate-500 mt-2">Посочете модел, за да разгледате детайлите</p>
 			</div>
 
@@ -174,6 +211,21 @@ const features = [
 				</a>
 
 				<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Дървени щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Естествен дъб и бамбук за премиум визия.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
+					<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
 						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
@@ -222,162 +274,218 @@ const features = [
 				</a>
 
 			</div>
-		</div>
-	</section>
 
-<!-- Models v3 -->
-	<section id="models" class="py-24 bg-white">
-		<div class="container mx-auto px-6">
-			
-			<div class="text-center mb-12">
-				<h2 class="text-4xl font-bold text-slate-900 mb-4">Вариянт 3</h2>
-				<p class="text-slate-500 max-w-2xl mx-auto">Разполагаме с решения за всеки тип прозорец. Използвайте филтрите, за да намерите бързо това, което търсите.</p>
-			</div>
-
-			<div class="flex flex-wrap justify-center gap-4 mb-12">
-				<button class="filter-btn active bg-slate-900 text-white px-6 py-2 rounded-full font-medium transition hover:shadow-lg" data-filter="all">Всички</button>
-				<button class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-6 py-2 rounded-full font-medium transition" data-filter="interior">Вътрешни</button>
-				<button class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-6 py-2 rounded-full font-medium transition" data-filter="exterior">Външни</button>
-				<button class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-6 py-2 rounded-full font-medium transition" data-filter="smart">Електрически</button>
-			</div>
-
-			<div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col pt-10 md:flex-row gap-4 h-200 md:h-150 w-full">
 				
-				<div class="product-item group" data-category="interior">
-					<a href={`${base}/models/roman`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-						<div class="relative h-64 overflow-hidden">
-							<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Римски щори">
-							<span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">ТОП ИЗБОР</span>
+				<a href={`${base}/models/roman`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Римски щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 opacity-0 group-hover:opacity-100 transition delay-100 duration-500">
+							НАЙ-ТЪРСЕНИ
 						</div>
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Римски щори</h3>
-							<p class="text-sm text-slate-500 mt-2">Текстилен уют за дома</p>
-							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
-								<span class="text-slate-400 text-sm">от 45 лв/м²</span>
-								<span class="text-blue-600 font-bold">Виж →</span>
-							</div>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Римски <br/> щори</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Меки тъкани и домашен уют. Разгледай 15+ цвята.
+						</p>
+						
+						<div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">
+							➞
 						</div>
-					</a>
-				</div>
+					</div>
+				</a>
 
-				<div class="product-item group" data-category="exterior">
-					<a href={`${base}/models/exterior`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-						<div class="relative h-64 overflow-hidden">
-							<img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Външни ролетни">
-						</div>
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Външни ролетни</h3>
-							<p class="text-sm text-slate-500 mt-2">Сигурност и изолация</p>
-							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
-								<span class="text-slate-400 text-sm">от 120 лв/м²</span>
-								<span class="text-blue-600 font-bold">Виж →</span>
-							</div>
-						</div>
-					</a>
-				</div>
+				<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Дървени щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Естествен дъб и бамбук за премиум визия.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
+					<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Дървени щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Естествен дъб и бамбук за премиум визия.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
 
-				<div class="product-item group" data-category="interior">
-					<a href={`${base}/models/wooden`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-						<div class="relative h-64 overflow-hidden">
-							<img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Дървени щори">
-						</div>
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Дървени щори</h3>
-							<p class="text-sm text-slate-500 mt-2">Естествен материал</p>
-							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
-								<span class="text-slate-400 text-sm">от 80 лв/м²</span>
-								<span class="text-blue-600 font-bold">Виж →</span>
-							</div>
-						</div>
-					</a>
-				</div>
+				<a href={`${base}/models/plise`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Плисе щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Плисе <br/> "Ден и Нощ"</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Компактни и енергоефективни решения.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
 
-				<div class="product-item group" data-category="smart">
-					<a href={`${base}/models/smart`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-						<div class="relative h-64 overflow-hidden">
-							<img src="https://images.unsplash.com/photo-1558002038-1091a1661729?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Умни щори">
-							<span class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">SMART</span>
-						</div>
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Smart Home Щори</h3>
-							<p class="text-sm text-slate-500 mt-2">Управление с телефон</p>
-							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
-								<span class="text-slate-400 text-sm">По запитване</span>
-								<span class="text-blue-600 font-bold">Виж →</span>
-							</div>
-						</div>
-					</a>
-				</div>
-
-                 <div class="product-item group" data-category="interior">
-					<a href={`${base}/models/plise`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-						<div class="relative h-64 overflow-hidden">
-							<img src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Плисе щори">
-						</div>
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Плисе щори</h3>
-							<p class="text-sm text-slate-500 mt-2">За нестандартни прозорци</p>
-							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
-								<span class="text-slate-400 text-sm">от 55 лв/м²</span>
-								<span class="text-blue-600 font-bold">Виж →</span>
-							</div>
-						</div>
-					</a>
-				</div>
-
-                 <div class="product-item group" data-category="exterior">
-					<a href={`${base}/models/exterior`} class="block overflow-hidden rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-						<div class="relative h-64 overflow-hidden">
-							<img src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=600" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Външни жалюзи">
-						</div>
-						<div class="p-6">
-							<h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition">Външни жалюзи</h3>
-							<p class="text-sm text-slate-500 mt-2">Прецизен контрол на светлината</p>
-							<div class="mt-4 flex justify-between items-center border-t pt-4 border-slate-50">
-								<span class="text-slate-400 text-sm">от 180 лв/м²</span>
-								<span class="text-blue-600 font-bold">Виж →</span>
-							</div>
-						</div>
-					</a>
-				</div>
+                <a href={`${base}/models/vertical`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<img 
+						src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?q=80&w=1200&auto=format&fit=crop" 
+						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
+						alt="Вертикални щори"
+					/>
+					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вертикални <br/> щори</h3>
+						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
+							Перфектни за офиси и френски прозорци.
+						</p>
+                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
+					</div>
+				</a>
 
 			</div>
+
 		</div>
 	</section>
 
-    <script>
-        const buttons = document.querySelectorAll('.filter-btn');
-        const items = document.querySelectorAll('.product-item');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                // 1. Смяна на активния бутон (цветове)
-                buttons.forEach(btn => {
-                    btn.classList.remove('bg-slate-900', 'text-white');
-                    btn.classList.add('bg-slate-100', 'text-slate-600');
-                });
-                button.classList.remove('bg-slate-100', 'text-slate-600');
-                button.classList.add('bg-slate-900', 'text-white');
+<!-- Models v2 Coruocel -->
+<section id="models" class="py-24 bg-slate-50 relative group/section">
+    <div class="container mx-auto px-6">
+        
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-slate-900">Нашите модели</h2>
+            <p class="text-slate-500 mt-2">Разгледайте пълната колекция от {models.length} вида щори</p>
+        </div>
 
-                // 2. Филтриране на елементите
-                const category = button.getAttribute('data-filter');
+        <div class="relative">
+            
+            <button id="scroll-left" class="absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-slate-800 hover:bg-blue-600 hover:text-white transition opacity-0 group-hover/section:opacity-100 md:flex">
+                ←
+            </button>
 
-				items.forEach(item => {
-					const htmlItem = item as HTMLElement;
+            <div id="slider-container" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth hide-scrollbar">
+                
+                {models.map((item) => (
+                    <a href={`${base}/models/${item.link}`} class="snap-center shrink-0 w-70 md:w-[320px] h-112.5 relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:-translate-y-2">
+                        
+                        <img 
+                            src={item.img} 
+                            alt={item.title}
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                        />
+                        
+                        <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                        
+                        <div class="absolute bottom-0 left-0 w-full p-6">
+                            <h3 class="text-2xl font-bold text-white mb-1">{item.title}</h3>
+                            <div class="w-10 h-1 bg-blue-600 rounded-full mb-3 group-hover:w-full transition-all duration-500"></div>
+                            
+                            <p class="text-slate-300 text-sm opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 delay-100">
+                                Виж модели и цветове →
+                            </p>
+                        </div>
+                    </a>
+                ))}
 
-					if (category === 'all' || item.getAttribute('data-category') === category) {
-						htmlItem.style.display = 'block';
-						htmlItem.animate([
-							{ opacity: 0, transform: 'scale(0.95)' },
-							{ opacity: 1, transform: 'scale(1)' }
-						], { duration: 300, fill: 'forwards' });
-					} else {
-						htmlItem.style.display = 'none';
-					}
-				});
-            });
-        });
-    </script>
+            </div>
+
+            <button id="scroll-right" class="absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-slate-800 hover:bg-blue-600 hover:text-white transition opacity-0 group-hover/section:opacity-100 md:flex">
+                →
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+<script>
+    const slider = document.getElementById('slider-container');
+    const leftBtn = document.getElementById('scroll-left');
+    const rightBtn = document.getElementById('scroll-right');
+
+    leftBtn?.addEventListener('click', () => {
+        slider?.scrollBy({ left: -350, behavior: 'smooth' });
+    });
+
+    rightBtn?.addEventListener('click', () => {
+        slider?.scrollBy({ left: 350, behavior: 'smooth' });
+    });
+</script>
+
+<!--Models v3 -->
+
+
+<section id="models" class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Пълна колекция</h2>
+            <p class="text-slate-500 mt-2">Изберете категория, за да разгледате</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            
+            {models.map((item) => (
+                <a href={`${base}/models/${item.link}`} class="group relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    
+                    <img 
+                        src={item.img} 
+                        alt={item.title}
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
+                    />
+                    
+                    <div class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition duration-300"></div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-4 text-center transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <p class="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1 opacity-0 group-hover:opacity-100 transition duration-300 delay-75">
+                            {item.subtitle}
+                        </p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">{item.title}</h3>
+                        
+                        <div class="w-0 h-0.5 bg-white mx-auto group-hover:w-12 transition-all duration-300"></div>
+                    </div>
+
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 delay-100 pointer-events-none">
+                        <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/50 flex items-center justify-center text-white">
+                            ↗
+                        </div>
+                    </div>
+                </a>
+            ))}
+
+        </div>
+    </div>
+</section>
 
 	<!-- Contatct Section -->
 	<section id="contact" class="py-24 bg-slate-900 text-white text-center px-6 relative overflow-hidden">
@@ -409,11 +517,23 @@ const features = [
 					<div class="space-y-6">
 						<div class="flex items-center gap-4">
 							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📞</div>
-							<div><p class="text-slate-400 text-sm">Телефон</p><p class="text-xl font-bold">0888 123 456</p></div>
+							<div><p class="text-slate-400 text-sm">Телефон</p><p class="text-xl font-bold">+359	888423893<br />+359887993053</p></div>
 						</div>
 						<div class="flex items-center gap-4">
 							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📧</div>
-							<div><p class="text-slate-400 text-sm">Имейл</p><p class="text-xl font-bold">sales@luxblinds.bg</p></div>
+							<div><p class="text-slate-400 text-sm">Имейл</p><p class="text-xl font-bold"><a href="mailto:riocolorsltd@abv.bg" class="hover:text-blue-400 transition">riocolorsltd@abv.bg</a></p></div>
+						</div>
+						<div class="flex items-center gap-4">
+							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+								<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+							</div>
+							<div><p class="text-slate-400 text-sm">Facebook</p><p class="text-lg font-bold"><a href="https://www.facebook.com/share/1FsCdhyCn4/" target="_blank" class="hover:text-blue-400 transition">Посетете страницата</a></p></div>
+						</div>
+						<div class="flex items-center gap-4">
+							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+								<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.217.63c-.688.297-1.272.702-1.855 1.285-.583.583-.988 1.167-1.285 1.855-.297.688-.498 1.558-.557 2.836C.008 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.836.297.688.702 1.272 1.285 1.855.583.583 1.167.988 1.855 1.285.688.297 1.559.498 2.837.557C8.333 23.992 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.059 2.148-.26 2.836-.557.688-.297 1.272-.702 1.855-1.285.583-.583.988-1.167 1.285-1.855.297-.688.498-1.559.557-2.837.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.148-.557-2.836-.297-.688-.702-1.272-1.285-1.855-.583-.583-1.167-.988-1.855-1.285-.688-.297-1.559-.498-2.837-.557C15.667.008 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.070 1.171.054 1.805.244 2.227.408.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.408 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.408-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.408-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.646-.07 4.849-.07z"/><circle cx="12" cy="12" r="3.305"/><path d="M17.706 5.368a.793.793 0 100-1.586.793.793 0 000 1.586z"/></svg>
+							</div>
+							<div><p class="text-slate-400 text-sm">Instagram</p><p class="text-lg font-bold"><a href="https://www.instagram.com/riohomeconcept?igsh=MXcybHEyMmo0a29raw==" target="_blank" class="hover:text-blue-400 transition">Посетете профила</a></p></div>
 						</div>
 					</div>
 				</div>
@@ -421,7 +541,7 @@ const features = [
 				<div class="bg-white p-8 rounded-2xl shadow-2xl text-slate-800">
 					<form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                         
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="access_key" value="251b872c-d92f-4c82-873a-2e580c455fd8">
 
 						<div>
 							<label class="block text-sm font-semibold text-slate-600 mb-1">Име</label>
@@ -471,24 +591,12 @@ const features = [
             const value = event.target.value;
 
             if (value === 'Друго') {
-                otherDetails?.classList.remove('hidden'); // Махаме класа hidden -> полето се показва
+                otherDetails?.classList.remove('hidden'); 
             } else {
-                otherDetails?.classList.add('hidden');    // Слагаме класа hidden -> полето се крие
+                otherDetails?.classList.add('hidden');   
             }
         });
     </script>
-
-	<!-- Влез в сайта Web3Forms Create Key.
-
-1.Напиши своя имейл (където искаш да получаваш запитванията).
-
-2.Ще получиш Access Key на имейла си веднага.
-
-3.Копирай този ключ.
-
-4.Върни се в кода горе и намери реда: <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-
-5.	Замени YOUR_ACCESS_KEY_HERE с ключа, който получи по пощата. -->
 
 </Layout>
 

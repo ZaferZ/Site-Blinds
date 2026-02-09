@@ -1,43 +1,81 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { products } from '../../data/products'; // Импортираме продуктите
-
+const base = import.meta.env.BASE_URL;
 export async function getStaticPaths() {
   // Дефинираме категориите
   const categories = [
+    // 1. Вертикални
     { 
-        slug: 'roman', 
-        title: 'Римски щори', 
-        desc: 'Класика и уют.', 
-        hero: 'https://images.unsplash.com/photo-1505691938895-1758d7bab58d?w=1200' 
+        slug: 'vertical', 
+        title: 'Вертикални щори', 
+        desc: 'Практично и стилно решение за големи прозорци и офиси. Огромен избор от текстилни и PVC ленти.', 
+        hero: '/images/hero-vertical.jpg' 
     },
+    // 2. Венециански
+    { 
+        slug: 'venetian', 
+        title: 'Венециански щори', 
+        desc: 'Класически алуминиеви хоризонтални щори. Прецизен контрол на светлината и лесна поддръжка.', 
+        hero: '/images/hero-venetian.jpg' 
+    },
+    // 3. Плисе
+    { 
+        slug: 'plise', 
+        title: 'Плисе щори', 
+        desc: 'Модерен дизайн с възможност за движение в двете посоки ("Ден и Нощ"). Идеални за нестандартни форми.', 
+        hero: '/images/hero-plise.jpg' 
+    },
+    // 4. Дървени
     { 
         slug: 'wooden', 
         title: 'Дървени щори', 
-        desc: 'Естествени материали.', 
-        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
+        desc: 'Лукс и топлина от естествен материал. Предлагаме Басвуд и Бамбук в различни ширини (25мм, 50мм).', 
+        hero: '/images/hero-wooden.jpg' 
     },
-       { 
-        slug: 'smart', 
-        title: 'Смарт щори', 
-        desc: 'Интелигентни решения за мързеливи домакини.', 
-        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
+    // 5. Римски (вкл. Делукс, Мини, Макс)
+    { 
+        slug: 'roman', 
+        title: 'Римски щори', 
+        desc: 'Текстилен уют за дома. Включва модели: Делукс, Мини, Макс и Макс Бокс.', 
+        hero: '/images/hero-roman.jpg' 
     },
-       { 
-        slug: 'exterior', 
-        title: 'Външни щори', 
-        desc: 'Стилен избор за външни пространства.', 
-        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
+    // 6. Руло (вкл. Кутия, Водачи)
+    { 
+        slug: 'roller', 
+        title: 'Руло щори', 
+        desc: 'Изчистен дизайн за всеки интериор. Варианти: Стандарт, С кутия и водачи, Руло Макс.', 
+        hero: '/images/hero-roller.jpg' 
     },
-       { 
-        slug: 'plise', 
-        title: 'Плисе щори', 
-        desc: 'Естествени материали.', 
-        hero: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200' 
+    // 7. Ден и Нощ (Зебра)
+    { 
+        slug: 'day-night', 
+        title: 'Щори Ден и Нощ', 
+        desc: 'Елегантни Зебра щори. Модели: Стандарт, С кутия и водачи, Макс Бокс.', 
+        hero: '/images/hero-day-night.jpg' 
     },
-    // Добави другите категории тук...
+    // 8. Хармония
+    { 
+        slug: 'harmony', 
+        title: 'Щора Хармония', 
+        desc: 'Ефирна елегантност, съчетаваща функциите на перде и щора в едно.', 
+        hero: '/images/hero-harmony.jpg' 
+    },
+    // 9. Вертикални Ден и Нощ
+    { 
+        slug: 'vertical-day-night', 
+        title: 'Вертикални Ден и Нощ', 
+        desc: 'Иновация, съчетаваща вертикални ленти с ефекта на прозрачност и плътност.', 
+        hero: '/images/hero-vertical-dn.jpg' 
+    },
+    // 10. Моторизирани
+    { 
+        slug: 'motorized', 
+        title: 'Ел. Корнизи и Автоматизация', 
+        desc: 'Умни решения с мотори Somfy и Motion за вашия комфорт. Управление с дистанционно или телефон.', 
+        hero: '/images/hero-motorized.jpg' 
+    }
   ];
-
   return categories.map((category) => {
     // Филтрираме само продуктите за тази категория
     const categoryProducts = products.filter(p => p.category === category.slug);
@@ -50,14 +88,13 @@ export async function getStaticPaths() {
 }
 
 const { category, products: categoryProducts } = Astro.props;
-const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title={`${category.title} | ЛуксБлайндс`}>
   
   <div class="relative h-[40vh] min-h-75 flex items-center justify-center">
     <div class="absolute inset-0">
-        <img src={category.hero} class="w-full h-full object-cover" alt={category.title} />
+        <img src={`${base}${category.hero}`} class="w-full h-full object-cover" alt={category.title} />
         <div class="absolute inset-0 bg-slate-900/60"></div>
     </div>
     <div class="relative z-10 text-center text-white p-6">
@@ -75,7 +112,7 @@ const base = import.meta.env.BASE_URL;
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition border border-slate-100 group flex flex-col h-full">
                     <div class="h-64 overflow-hidden relative">
                         <img 
-                            src={product.images[0]} 
+                            src={`${base}${product.images[0]}`} 
                             alt={product.name} 
                             class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
                         />
