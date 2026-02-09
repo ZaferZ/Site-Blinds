@@ -43,14 +43,14 @@ export const products = [
   },
   {
     id: "vertical-classic",
-    name: 'Вертикална щора "Класик"',
+    name: 'Вертикална щора',
     price: '5€/кв.м',
     category: 'vertical',
     shortDesc: 'Елегантно решение за големи прозорци и офиси.',
     description: 'Класически вертикални щори с текстилни ленти с ширина 89мм или 127мм. Предлагат отличен контрол на светлината чрез завъртане на ламелите. Подходящи както за дома, така и за бизнес пространства.',
     images: [
-      "/images/vertical/vertical-orange.png",
       "/images/vertical/vertical-gray.png",
+      "/images/vertical/vertical-orange.png",
       "/images/vertical/vertical-gray2.jpg",
       "/images/vertical/vertical-gray3.png",
       "/images/vertical/vertical-office.jpg", 
@@ -59,8 +59,9 @@ export const products = [
     specs: {
       "Материал": "Антистатичен текстил",
       "Ширина на лентата": "89 мм / 127 мм",
+      "Цена на релса": "18 € за метър",
       "Управление": "Ръчно (въже и верижка)",
-      "Монтаж": "Таван или стена",
+      "Монтаж": "Таван",
       "Гаранция": "24 месеца"
     }
   }
