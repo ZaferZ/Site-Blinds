@@ -21,7 +21,7 @@ const features = [
   { 
     title: "Венециански", 
     subtitle: "Алуминиеви", 
-    img: "https://images.unsplash.com/photo-1534196163351-402941571474?w=600&q=80", 
+    img: `${base}/images/venetian/venetian-sample.jpg`, 
     link: "venetian" 
   },
 
@@ -29,7 +29,7 @@ const features = [
   { 
     title: "Плисе", 
     subtitle: "Стандарт & Ден и Нощ", 
-    img: "https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?w=600&q=80", 
+    img: `${base}/images/plise/plise-sample.jpg`, 
     link: "plise" 
   },
 
@@ -37,7 +37,7 @@ const features = [
   { 
     title: "Дървени", 
     subtitle: "Естествено дърво", 
-    img: "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=80", 
+    img: `${base}/images/wooden/wooden-sample.jpg`, 
     link: "wooden" 
   },
 
@@ -45,7 +45,7 @@ const features = [
   { 
     title: "Римски", 
     subtitle: "Делукс, Макс & Бокс", 
-    img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80", 
+    img: `${base}/images/roman/roman-sample.jpg`	, 
     link: "roman" 
   },
 
@@ -53,7 +53,7 @@ const features = [
   { 
     title: "Руло щори", 
     subtitle: "С кутия и водачи", 
-    img: "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?w=600&q=80", 
+    img: `${base}/images/roller/roller-sample.webp`, 
     link: "roller" 
   },
 
@@ -61,7 +61,7 @@ const features = [
   { 
     title: "Ден и Нощ", 
     subtitle: "Стандарт & Макс Бокс", 
-    img: "https://images.unsplash.com/photo-1449824913929-49aa9957296f?w=600&q=80", 
+    img: `${base}/images/day-night/day-night-sample.jpg`, 
     link: "day-night" 
   },
 
@@ -69,7 +69,7 @@ const features = [
   { 
     title: "Хармония", 
     subtitle: "Ефирна елегантност", 
-    img: "https://images.unsplash.com/photo-1505691938895-1758d7bab58d?w=600&q=80", 
+    img: `${base}/images/harmony/harmony-sample.jpg`, 
     link: "harmony" 
   },
 
@@ -77,7 +77,7 @@ const features = [
   { 
     title: "Верт. Ден и Нощ", 
     subtitle: "Иновация 2 в 1", 
-    img: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=600&q=80", 
+    img: `${base}/images/vertical-day-night/vertical-day-night-sample.webp`, 
     link: "vertical-day-night" 
   },
 
@@ -85,7 +85,7 @@ const features = [
   { 
     title: "Ел. Корнизи", 
     subtitle: "Автоматизация Somfy", 
-    img: "https://images.unsplash.com/photo-1558002038-1091a1661729?w=600&q=80", 
+    img: `${base}/images/motorized/motorized-sample.jpg`, 
     link: "motorized" 
   },
 ];
@@ -189,7 +189,7 @@ const features = [
 				
 				<a href={`${base}/models/roman`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/roman/roman-sample.jpg`}
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
 						alt="Римски щори"
 					/>
@@ -212,7 +212,7 @@ const features = [
 
 				<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/wooden/wooden-sample.jpg`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
 						alt="Дървени щори"
 					/>
@@ -225,15 +225,15 @@ const features = [
                         <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
 					</div>
 				</a>
-					<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<a href={`${base}/models/plise`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/plise/plise-sample.jpg`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Дървени щори"
+						alt="Плисе щори"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
 					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Плисе <br/> щори</h3>
 						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
 							Естествен дъб и бамбук за премиум визия.
 						</p>
@@ -241,15 +241,15 @@ const features = [
 					</div>
 				</a>
 
-				<a href={`${base}/models/plise`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+				<a href={`${base}/models/venetian`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/venetian/venetian-sample.jpg`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Плисе щори"
+						alt="Вененциански щори"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
 					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Плисе <br/> "Ден и Нощ"</h3>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вененциански <br/> щори</h3>
 						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
 							Компактни и енергоефективни решения.
 						</p>
@@ -259,7 +259,7 @@ const features = [
 
                 <a href={`${base}/models/vertical`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/vertical/vertical-sample.png`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
 						alt="Вертикални щори"
 					/>
@@ -277,11 +277,11 @@ const features = [
 
 <div class="flex flex-col pt-10 md:flex-row gap-4 h-200 md:h-150 w-full">
 				
-				<a href={`${base}/models/roman`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+				<a href={`${base}/models/roller`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/roller/roller-sample.webp`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Римски щори"
+						alt="Руло щори"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
 					
@@ -289,7 +289,7 @@ const features = [
 						<div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 opacity-0 group-hover:opacity-100 transition delay-100 duration-500">
 							НАЙ-ТЪРСЕНИ
 						</div>
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Римски <br/> щори</h3>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Руло <br/> щори</h3>
 						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
 							Меки тъкани и домашен уют. Разгледай 15+ цвята.
 						</p>
@@ -300,30 +300,30 @@ const features = [
 					</div>
 				</a>
 
-				<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+				<a href={`${base}/models/day-night`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/day-night/day-night-sample.jpg`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
 						alt="Дървени щори"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
 					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Ден и Нощ<br/> щори</h3>
 						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
 							Естествен дъб и бамбук за премиум визия.
 						</p>
                         <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
 					</div>
 				</a>
-					<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+					<a href={`${base}/models/harmony`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/harmony/harmony-sample.jpg`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
 						alt="Дървени щори"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
 					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Хармония <br/> щори</h3>
 						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
 							Естествен дъб и бамбук за премиум визия.
 						</p>
@@ -331,15 +331,15 @@ const features = [
 					</div>
 				</a>
 
-				<a href={`${base}/models/plise`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+				<a href={`${base}/models/vertical-day-night`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1461988320302-91b564c5c9bc?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/vertical-day-night/vertical-day-night-sample.webp`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
 						alt="Плисе щори"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
 					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Плисе <br/> "Ден и Нощ"</h3>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вертикални <br/> "Ден и Нощ"</h3>
 						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
 							Компактни и енергоефективни решения.
 						</p>
@@ -347,15 +347,15 @@ const features = [
 					</div>
 				</a>
 
-                <a href={`${base}/models/vertical`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
+                <a href={`${base}/models/motorized`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
 					<img 
-						src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?q=80&w=1200&auto=format&fit=crop" 
+						src={`${base}/images/motorized/motorized-sample.jpg`} 
 						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
 						alt="Вертикални щори"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
 					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вертикални <br/> щори</h3>
+						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Електрически <br/> щори</h3>
 						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
 							Перфектни за офиси и френски прозорци.
 						</p>
