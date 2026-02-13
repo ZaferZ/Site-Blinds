@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { products } from '../../data/products';
 
-// 1. Генериране на пътища за всички продукти
+// 1. Генериране на пътища
 export async function getStaticPaths() {
   return products.map((product) => ({
     params: { id: product.id },
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   }));
 }
 
-// 2. Взимане на данните за текущия продукт
+// 2. Взимане на данните
 const { product } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
@@ -20,9 +20,9 @@ const base = import.meta.env.BASE_URL;
   <div class="container mx-auto px-6 py-12 md:py-20">
     
     <nav class="text-sm text-slate-500 mb-8">
-      <a href={`${base}`} class="hover:text-blue-600">Начало</a> 
+      <a href={base} class="hover:text-blue-600">Начало</a> 
       <span class="mx-2">/</span>
-      <a href={`${base}/models/${product.category}`} class="hover:text-blue-600 capitalize">Категория</a>
+      <a href={`${base}models/${product.category}`} class="hover:text-blue-600 capitalize">Категория</a>
       <span class="mx-2">/</span>
       <span class="text-slate-800 font-semibold">{product.name}</span>
     </nav>
@@ -31,21 +31,36 @@ const base = import.meta.env.BASE_URL;
       
       <div>
         <div class="aspect-4/3 rounded-2xl overflow-hidden shadow-lg mb-4 bg-slate-100 relative group">
+          
           <img 
             id="main-image" 
             src={`${base}${product.images[0]}`} 
             alt={product.name} 
-            class="w-full h-full object-cover transition duration-500"
+            class="w-full h-full object-cover transition duration-300"
           />
+
+          <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+
+          <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+
         </div>
 
-        <div class="flex gap-4 overflow-x-auto pb-2">
+        <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
           {product.images.map((img, index) => (
             <button 
-              class="thumbnail-btn w-24 h-24 shrink-0 rounded-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition focus:border-blue-500 focus:outline-none"
+              class="thumbnail-btn w-24 h-24 shrink-0 rounded-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition focus:outline-none"
+              data-index={index}
               data-image={`${base}${img}`}
             >
-              <img src={`${base}${img}`} class="w-full h-full object-cover" />
+              <img src={`${base}${img}`} class="w-full h-full object-cover pointer-events-none" />
             </button>
           ))}
         </div>
@@ -59,6 +74,8 @@ const base = import.meta.env.BASE_URL;
           <p>{product.description}</p>
         </div>
 
+    
+
         <div class="bg-slate-50 rounded-xl p-6 mb-8 border border-slate-100">
           <h3 class="font-bold text-slate-800 mb-4 text-lg">Технически характеристики</h3>
           <ul class="space-y-3">
@@ -70,9 +87,24 @@ const base = import.meta.env.BASE_URL;
             ))}
           </ul>
         </div>
+            {product.features && (
+          <div class="bg-blue-50/50 rounded-xl p-6 mb-8 border border-blue-100">
+            <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+              <span class="text-blue-600 text-xl">ⓘ</span> Важна информация
+            </h3>
+            <ul class="space-y-3">
+              {product.features.map((feature) => (
+                <li class="flex items-start gap-3 text-slate-700">
+                  <span class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0"></span>
+                  <span class="text-sm md:text-base leading-snug">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href={`${base}/#contact`} class="flex-1 bg-slate-900 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg transform active:scale-95">
+          <a href={`${base}#contact`} class="flex-1 bg-slate-900 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg transform active:scale-95">
             Заяви безплатен оглед
           </a>
           <a href="tel:0888123456" class="flex-1 border-2 border-slate-200 text-slate-700 text-center py-4 rounded-xl font-bold hover:border-blue-600 hover:text-blue-600 transition">
@@ -89,25 +121,62 @@ const base = import.meta.env.BASE_URL;
   </div>
 </Layout>
 
-<script>
-  // Използваме 'as HTMLImageElement' (ако си в .ts файл) или просто проверка за тип
+<script define:vars={{ images: product.images, base }}>
+  // Тук вкарваме данните от сървъра директно в JS променливи
+  let currentIndex = 0;
+  
   const mainImage = document.getElementById('main-image');
-  const buttons = document.querySelectorAll('.thumbnail-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const thumbnails = document.querySelectorAll('.thumbnail-btn');
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const newSrc = btn.getAttribute('data-image');
+  // Функция за смяна на снимката
+  function updateImage(index) {
+    // 1. Ефект на избледняване
+    mainImage.style.opacity = '0.5';
 
-      
-      if (mainImage && mainImage instanceof HTMLImageElement && newSrc) {
-        
-        mainImage.style.opacity = '0.5';
+    setTimeout(() => {
+      // 2. Смяна на източника
+      mainImage.src = base + images[index];
+      mainImage.style.opacity = '1';
+    }, 200);
 
-        setTimeout(() => {
-          mainImage.src = newSrc;
-          mainImage.style.opacity = '1';
-        }, 200);
+    // 3. Актуализиране на активния Thumbnail (бордер)
+    thumbnails.forEach((thumb, i) => {
+      if (i === index) {
+        thumb.classList.add('border-blue-500');
+        thumb.classList.remove('border-transparent');
+      } else {
+        thumb.classList.remove('border-blue-500');
+        thumb.classList.add('border-transparent');
       }
     });
+
+    currentIndex = index;
+  }
+
+  // Кликове на бутоните
+  nextBtn?.addEventListener('click', () => {
+    // Ако сме на края, връща в началото (Cyclic)
+    let newIndex = (currentIndex + 1) % images.length;
+    updateImage(newIndex);
   });
+
+  prevBtn?.addEventListener('click', () => {
+    // Ако сме в началото, отива на края
+    let newIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage(newIndex);
+  });
+
+  // Кликове на тъмбнейлите
+  thumbnails.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = parseInt(btn.getAttribute('data-index'));
+      updateImage(index);
+    });
+  });
+
+  // Инициализация: маркирай първата снимка като активна
+  thumbnails[0]?.classList.add('border-blue-500');
+  thumbnails[0]?.classList.remove('border-transparent');
 </script>

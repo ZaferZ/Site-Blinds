@@ -2,12 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 
-// Тук можем да дефинираме малко данни, за да не ги хардкодваме долу
-const features = [
-  { title: "Прецизни размери", desc: "Безплатен оглед и вземане на размери с точност до милиметър.", icon: "M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" },
-  { title: "Премиум материали", desc: "Работим само с доказани европейски производители на тъкани и механизми.", icon: "M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" },
-  { title: "Бърз монтаж", desc: "Чист и професионален монтаж в удобно за вас време, без излишен хаос.", icon: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" },
-];
 	const models = [
   // 1. Вертикални
   { 
@@ -21,7 +15,7 @@ const features = [
   { 
     title: "Венециански", 
     subtitle: "Алуминиеви", 
-    img: `${base}/images/venetian/venetian-sample.jpg`, 
+    img: `${base}/images/venetian/venetian-sample.png`, 
     link: "venetian" 
   },
 
@@ -29,7 +23,7 @@ const features = [
   { 
     title: "Плисе", 
     subtitle: "Стандарт & Ден и Нощ", 
-    img: `${base}/images/plise/plise-sample.jpg`, 
+    img: `${base}/images/plise/plise-sample.png`, 
     link: "plise" 
   },
 
@@ -37,7 +31,7 @@ const features = [
   { 
     title: "Дървени", 
     subtitle: "Естествено дърво", 
-    img: `${base}/images/wooden/wooden-sample.jpg`, 
+    img: `${base}/images/wooden/wooden-sample.png`, 
     link: "wooden" 
   },
 
@@ -121,23 +115,6 @@ const features = [
 		</div>
 	</section>
 
-	<section class="py-20 bg-white">
-		<div class="container mx-auto px-6">
-			<div class="grid md:grid-cols-3 gap-12 text-center">
-				{features.map(feature => (
-					<div class="group p-8 rounded-2xl hover:bg-slate-50 transition duration-300">
-						<div class="w-16 h-16 mx-auto mb-6 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-								<path stroke-linecap="round" stroke-linejoin="round" d={feature.icon} />
-							</svg>
-						</div>
-						<h3 class="text-2xl font-bold text-slate-800 mb-4">{feature.title}</h3>
-						<p class="text-slate-600 leading-relaxed">{feature.desc}</p>
-					</div>
-				))}
-			</div>
-		</div>
-	</section>
 
 	<!-- <section id="models" class="py-20 bg-slate-100">
 
@@ -176,7 +153,7 @@ const features = [
 	</section> -->
 
 
-<!-- Models v2 -->
+<!-- Models v2
 <section id="models" class="py-24 bg-slate-50 overflow-hidden">
 		<div class="container mx-auto px-6 h-full">
 			
@@ -366,8 +343,50 @@ const features = [
 			</div>
 
 		</div>
-	</section>
+	</section> -->
 
+<!--Models v3 -->
+<section id="models" class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Пълна колекция</h2>
+            <p class="text-slate-500 mt-2">Изберете категория, за да разгледате</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            
+            {models.map((item) => (
+                <a href={`${base}/models/${item.link}`} class="group relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    
+                    <img 
+                        src={item.img} 
+                        alt={item.title}
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
+                    />
+                    
+                    <div class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition duration-300"></div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-4 text-center transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <p class="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1 opacity-0 group-hover:opacity-100 transition duration-300 delay-75">
+                            {item.subtitle}
+                        </p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">{item.title}</h3>
+                        
+                        <div class="w-0 h-0.5 bg-white mx-auto group-hover:w-12 transition-all duration-300"></div>
+                    </div>
+
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 delay-100 pointer-events-none">
+                        <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/50 flex items-center justify-center text-white">
+                            ↗
+                        </div>
+                    </div>
+                </a>
+            ))}
+
+        </div>
+    </div>
+</section>
 
 <!-- Models v2 Coruocel -->
 <section id="models" class="py-24 bg-slate-50 relative group/section">
@@ -441,51 +460,6 @@ const features = [
         slider?.scrollBy({ left: 350, behavior: 'smooth' });
     });
 </script>
-
-<!--Models v3 -->
-
-
-<section id="models" class="py-24 bg-white">
-    <div class="container mx-auto px-4">
-        
-        <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Пълна колекция</h2>
-            <p class="text-slate-500 mt-2">Изберете категория, за да разгледате</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            
-            {models.map((item) => (
-                <a href={`${base}/models/${item.link}`} class="group relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                    
-                    <img 
-                        src={item.img} 
-                        alt={item.title}
-                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
-                    />
-                    
-                    <div class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition duration-300"></div>
-                    
-                    <div class="absolute bottom-0 left-0 w-full p-4 text-center transform translate-y-2 group-hover:translate-y-0 transition duration-300">
-                        <p class="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1 opacity-0 group-hover:opacity-100 transition duration-300 delay-75">
-                            {item.subtitle}
-                        </p>
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">{item.title}</h3>
-                        
-                        <div class="w-0 h-0.5 bg-white mx-auto group-hover:w-12 transition-all duration-300"></div>
-                    </div>
-
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 delay-100 pointer-events-none">
-                        <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/50 flex items-center justify-center text-white">
-                            ↗
-                        </div>
-                    </div>
-                </a>
-            ))}
-
-        </div>
-    </div>
-</section>
 
 	<!-- Contatct Section -->
 	<section id="contact" class="py-24 bg-slate-900 text-white text-center px-6 relative overflow-hidden">
@@ -597,6 +571,10 @@ const features = [
             }
         });
     </script>
+
+
+
+
 
 </Layout>
 
