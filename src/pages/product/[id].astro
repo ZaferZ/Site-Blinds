@@ -22,14 +22,14 @@ const base = import.meta.env.BASE_URL;
     <nav class="text-sm text-slate-500 mb-8">
       <a href={base} class="hover:text-blue-600">Начало</a> 
       <span class="mx-2">/</span>
-      <a href={`${base}models/${product.category}`} class="hover:text-blue-600 capitalize">Категория</a>
+      <a href={`${base}/models/${product.category}`} class="hover:text-blue-600 capitalize">Категория</a>
       <span class="mx-2">/</span>
       <span class="text-slate-800 font-semibold">{product.name}</span>
     </nav>
 
     <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
       
-      <div>
+      <div class="min-w-0">
         <div class="aspect-4/3 rounded-2xl overflow-hidden shadow-lg mb-4 bg-slate-100 relative group">
           
           <img 
@@ -53,17 +53,27 @@ const base = import.meta.env.BASE_URL;
 
         </div>
 
-        <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
-          {product.images.map((img, index) => (
-            <button 
-              class="thumbnail-btn w-24 h-24 shrink-0 rounded-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition focus:outline-none"
-              data-index={index}
-              data-image={`${base}${img}`}
-            >
-              <img src={`${base}${img}`} class="w-full h-full object-cover pointer-events-none" />
-            </button>
-          ))}
-        </div>
+     <div class="w-full flex gap-3 overflow-x-auto pb-4 pt-2 snap-x snap-mandatory hide-scrollbar">
+  {product.images.map((img, index) => (
+    <button 
+      class="thumbnail-btn w-20 h-20 md:w-24 md:h-24 shrink-0 snap-start rounded-lg overflow-hidden border-2 border-transparent focus:border-blue-500 transition"
+      data-index={index}
+      data-image={`${base}${img}`}
+    >
+      <img src={`${base}${img}`} class="w-full h-full object-cover pointer-events-none" />
+    </button>
+  ))}
+</div>
+
+<style>
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
       </div>
 
       <div>
