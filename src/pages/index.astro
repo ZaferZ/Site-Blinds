@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL;
   { 
     title: "Вертикални", 
     subtitle: "Текстил и PVC", 
-    img: `${base}/images/vertical/vertical-sample.png`, 
+    img: `${base}/images/vertical/vertical-sample.jpg`, 
     link: "vertical" 
   },
   
@@ -79,31 +79,59 @@ const base = import.meta.env.BASE_URL;
   { 
     title: "Ел. Корнизи", 
     subtitle: "Автоматизация Somfy", 
-    img: `${base}/images/motorized/motorized-sample.jpg`, 
+    img: `${base}/images/motorized/motorized-sample.png`, 
     link: "motorized" 
   },
 ];
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1920",
-    title: "Създай уют и стил",
-    subtitle: "Премиум интериорни щори по ваш размер",
+    image: `${base}/images/main-banner/banner-1.png`,
+    title: "Облечете прозорците си в стил.",
+    subtitle: "",
     buttonText: "Разгледай моделите",
     link: `${base}#models`
   },
   {
-    image: "https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1920",
-    title: "Дървени венециански",
-    subtitle: "Естествена топлина и лукс за вашия дом",
-    buttonText: "Виж дървени щори",
-    link: `${base}models/wooden`
+    image: `${base}/images/main-banner/banner-2.png`,
+    title: "Създайте дом, който вдъхновява.",
+    subtitle: "",
+    buttonText: "Разгледай моделите",
+    link: `${base}#models`
   },
   {
-    image: "https://images.unsplash.com/photo-1558002038-1091a1661729?q=80&w=1920",
-    title: "Умен дом",
-    subtitle: "Автоматизирани корнизи и мотори Somfy",
-    buttonText: "Към автоматизация",
-    link: `${base}models/motorized`
+    image: `${base}/images/main-banner/banner-3.png`,
+    title: "Индивидуални решения за всеки дом",
+    subtitle: "",
+    buttonText: "Разгледай моделите",
+    link: `${base}#models`
+  },
+  {
+    image: `${base}/images/main-banner/banner-4.png`,
+    title: "Перфектната светлина започва с правилния избор",
+    subtitle: "",
+    buttonText: "Разгледай моделите",
+    link: `${base}#models`
+  },
+  {
+    image: `${base}/images/main-banner/banner-5.png`,
+    title: "Качество, което се усеща",
+    subtitle: "",
+    buttonText: "Разгледай моделите",
+    link: `${base}#models`
+  },
+  {
+    image: `${base}/images/main-banner/banner-6.png`,
+    title: "Стил, комфорт и функционалност",
+    subtitle: "",
+    buttonText: "Разгледай моделите",
+    link: `${base}#models`
+  },
+    {
+    image: `${base}/images/main-banner/banner-7.png`,
+    title: "Висококачествени материали и надеждни системи",
+    subtitle: "",
+    buttonText: "Разгледай моделите",
+    link: `${base}#models`
   }
 ];
 ---
@@ -613,13 +641,13 @@ const slides = [
 		<div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 		
 		<div class="relative z-10 max-w-3xl mx-auto">
-			<h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Готови ли сте да промените дома си?</h2>
+			<h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Промяната на вашия дом започва тук.</h2>
 			<p class="text-xl text-slate-300 mb-12 leading-relaxed">
-				Не губете време в чудене. Свържете се с нас днес за безплатна консултация и вземане на размери на място.
+				Свържете се с нас и получете безплатна консултация и измерване на място.  
 			</p>
-			<button class="bg-blue-500 hover:bg-blue-600 text-white font-bold text-xl py-5 px-12 rounded-full transition transform hover:scale-105 shadow-2xl hover:shadow-blue-500/50">
+			<a href="tel:0887993053" class="bg-blue-500 hover:bg-blue-600 text-white font-bold text-xl py-5 px-12 rounded-full transition transform hover:scale-105 shadow-2xl hover:shadow-blue-500/50">
 				📞 Обади се сега: +359 887993053
-			</button>
+			</a>
 			<p class="mt-6 text-slate-400">Или ни пишете на имейл за оферта.</p>
 		</div>
 	</section>
@@ -638,7 +666,7 @@ const slides = [
 					<div class="space-y-6">
 						<div class="flex items-center gap-4">
 							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📞</div>
-							<div><p class="text-slate-400 text-sm">Телефон</p><p class="text-xl font-bold">+359	888423893<br />+359 887993053</p></div>
+							<div><p class="text-slate-400 text-sm">Телефон</p><a href="tel:0888423893" class="text-xl font-bold">+359	888423893</a><br /><a href="tel:0887993053" class="text-xl font-bold">+359 887993053</a></div>
 						</div>
 						<div class="flex items-center gap-4">
 							<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl">📧</div>

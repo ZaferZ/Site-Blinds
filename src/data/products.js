@@ -142,12 +142,12 @@ export const products = [
     shortDesc: 'Щора, перде и завеса, всичко това в едно цяло.', 
     description: 'Вертикалните щори „ден и нощ“ съчетават ефирна прозрачност с текстурирана плътна материя. Тези щори позволяват свободно преминаване между лентите, без нужда от събиране.  Всяка лента може да се сваля и подменя или почиства индивидуално, което прави поддръжката бърза и лесна. Освен естетика перде щората предлага и отлична функционалност.', 
     images: [
-      "/images/vertical-day-night/vertical-day-night-1.png",
+      "/images/vertical-day-night/vertical-day-night-1.jpg",
       "/images/vertical-day-night/vertical-day-night-2.jpg",
       "/images/vertical-day-night/vertical-day-night-3.jpg",
       "/images/vertical-day-night/vertical-day-night-4.png",
       "/images/vertical-day-night/vertical-day-night-5.jpg",
-      "/images/vertical-day-night/vertical-day-night-6.png" 
+      "/images/vertical-day-night/vertical-day-night-6.jpg" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
