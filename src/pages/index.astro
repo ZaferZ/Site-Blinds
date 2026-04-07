@@ -139,36 +139,6 @@ const slides = [
 <Layout title="Rio Homes - Елегантни решения за вашия дом">
 
 
-	<!-- Hero -->
-	 
-	<!-- <section class="relative h-[80vh] min-h-150 flex items-center justify-center overflow-hidden">
-		<div class="absolute inset-0 z-0">
-				<img 
-					src={`${base}/hero.png`} 
-					alt="Модерни щори в хол и офис" 
-					class="w-full h-full object-cover scale-105 animate-slow-zoom" 
-				/>
-			<div class="absolute inset-0 bg-linear-to-r from-slate-900/80 to-slate-900/40"></div>
-		</div>
-
-		<div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-			<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight drop-shadow-lg">
-				Съвършена светлина <br/> във вашия дом.
-			</h1>
-			<p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-2xl mx-auto font-light">
-				Преобразете пространството си с нашите премиум щори по индивидуален размер. Комфорт и стил, които заслужавате.
-			</p>
-			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href={`${base}/#contact`} class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition transform hover:-translate-y-1 shadow-lg hover:shadow-blue-500/30">
-					Заяви безплатен оглед
-				</a>
-				<a href={`${base}/#models`} class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold py-4 px-10 rounded-full transition border border-white/30">
-					Разгледай моделите
-				</a>
-			</div>
-		</div>
-	</section> -->
-
 
 <!-- Hero slider -->
 	<section class="relative h-full min-h-150 overflow-hidden bg-slate-900">
@@ -290,237 +260,6 @@ const slides = [
     animateText(0);
 </script>
 
-
-	<!-- <section id="models" class="py-20 bg-slate-100">
-
-		<div class="container mx-auto px-6">
-			<div class="text-center mb-16">
-				<h2 class="text-4xl font-bold text-slate-900 mb-4">Нашите реализации</h2>
-				<p class="text-xl text-slate-600 max-w-2xl mx-auto">Част от проектите, с които се гордеем. Внимание към всеки детайл.</p>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4">
-				
-				<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl">
-					<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Римски щори" />
-					<div class="absolute inset-0 bg-linear-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-						<span class="text-white text-2xl font-bold">Римски щори в спалня</span>
-					</div>
-				</div>
-
-				<div class="relative group overflow-hidden rounded-2xl shadow-lg">
-					<img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Дървени щори" />
-					<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition p-6 flex items-end"><span class="text-white font-semibold">Дървени венециански</span></div>
-				</div>
-				
-				<div class="relative group overflow-hidden rounded-2xl shadow-lg">
-					<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Плисе щори" />
-					<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition p-6 flex items-end"><span class="text-white font-semibold">Модерни плисета</span></div>
-				</div>
-
-				<div class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
-					<img src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Вертикални щори" />
-					<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition p-6 flex items-end"><span class="text-white font-semibold">Ден и Нощ за хол</span></div>
-				</div>
-
-			</div>
-		</div>
-	</section> -->
-
-
-<!-- Models v2
-<section id="models" class="py-24 bg-slate-50 overflow-hidden">
-		<div class="container mx-auto px-6 h-full">
-			
-			<div class="text-center mb-12">
-				<h2 class="text-4xl font-bold text-slate-900">Вариaнт 1</h2>
-				<p class="text-slate-500 mt-2">Посочете модел, за да разгледате детайлите</p>
-			</div>
-
-			<div class="flex flex-col md:flex-row gap-4 h-200 md:h-150 w-full">
-				
-				<a href={`${base}/models/roman`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/roman/roman-sample.jpg`}
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Римски щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 opacity-0 group-hover:opacity-100 transition delay-100 duration-500">
-							НАЙ-ТЪРСЕНИ
-						</div>
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Римски <br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Меки тъкани и домашен уют. Разгледай 15+ цвята.
-						</p>
-						
-						<div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">
-							➞
-						</div>
-					</div>
-				</a>
-
-				<a href={`${base}/models/wooden`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/wooden/wooden-sample.jpg`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Дървени щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Дървени <br/> Венециански</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Естествен дъб и бамбук за премиум визия.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-					<a href={`${base}/models/plise`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/plise/plise-sample.jpg`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Плисе щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Плисе <br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Естествен дъб и бамбук за премиум визия.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-
-				<a href={`${base}/models/venetian`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/venetian/venetian-sample.jpg`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Вененциански щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вененциански <br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Компактни и енергоефективни решения.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-
-                <a href={`${base}/models/vertical`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/vertical/vertical-sample.png`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Вертикални щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вертикални <br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Перфектни за офиси и френски прозорци.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-
-			</div>
-
-<div class="flex flex-col pt-10 md:flex-row gap-4 h-200 md:h-150 w-full">
-				
-				<a href={`${base}/models/roller`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/roller/roller-sample.webp`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Руло щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 opacity-0 group-hover:opacity-100 transition delay-100 duration-500">
-							НАЙ-ТЪРСЕНИ
-						</div>
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Руло <br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Меки тъкани и домашен уют. Разгледай 15+ цвята.
-						</p>
-						
-						<div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">
-							➞
-						</div>
-					</div>
-				</a>
-
-				<a href={`${base}/models/day-night`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/day-night/day-night-sample.jpg`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Дървени щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Ден и Нощ<br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Естествен дъб и бамбук за премиум визия.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-					<a href={`${base}/models/harmony`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/harmony/harmony-sample.jpg`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Дървени щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Хармония <br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Естествен дъб и бамбук за премиум визия.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-
-				<a href={`${base}/models/vertical-day-night`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/vertical-day-night/vertical-day-night-sample.webp`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Плисе щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Вертикални <br/> "Ден и Нощ"</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Компактни и енергоефективни решения.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-
-                <a href={`${base}/models/motorized`} class="group relative flex-1 hover:grow-2 hover:flex-3 transition-all duration-700 ease-in-out overflow-hidden rounded-3xl cursor-pointer shadow-lg">
-					<img 
-						src={`${base}/images/motorized/motorized-sample.jpg`} 
-						class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-700 group-hover:scale-110" 
-						alt="Вертикални щори"
-					/>
-					<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 w-full p-8 flex flex-col justify-end items-start transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-						<h3 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">Електрически <br/> щори</h3>
-						<p class="text-slate-300 text-sm md:text-lg max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-700 overflow-hidden">
-							Перфектни за офиси и френски прозорци.
-						</p>
-                        <div class="mt-4 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition delay-200">➞</div>
-					</div>
-				</a>
-
-			</div>
-
-		</div>
-	</section> -->
-
-<!--Models v3 -->
 <section id="models" class="py-24 bg-white">
     <div class="container mx-auto px-4">
         
@@ -564,7 +303,7 @@ const slides = [
 </section>
 
 <!-- Models v2 Coruocel -->
-<section id="models" class="py-24 bg-slate-50 relative group/section">
+<!-- <section id="models" class="py-24 bg-slate-50 relative group/section">
     <div class="container mx-auto px-6">
         
         <div class="text-center mb-12">
@@ -610,7 +349,7 @@ const slides = [
 
         </div>
     </div>
-</section>
+</section> -->
 
 <style>
     .hide-scrollbar::-webkit-scrollbar {
@@ -646,7 +385,7 @@ const slides = [
 				Свържете се с нас и получете безплатна консултация и измерване на място.  
 			</p>
 			<a href="tel:0887993053" class="bg-blue-500 hover:bg-blue-600 text-white font-bold text-xl py-5 px-12 rounded-full transition transform hover:scale-105 shadow-2xl hover:shadow-blue-500/50">
-				📞 Обади се сега: +359 887993053
+				📞 Обади се сега
 			</a>
 			<p class="mt-6 text-slate-400">Или ни пишете на имейл за оферта.</p>
 		</div>
