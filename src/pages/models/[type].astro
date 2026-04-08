@@ -10,70 +10,70 @@ export async function getStaticPaths() {
         slug: 'vertical', 
         title: 'Вертикални щори', 
         desc: 'Практично и стилно решение за големи прозорци и офиси. Огромен избор от текстилни и PVC ленти.', 
-        hero: '/images/category-banner/vertical-banner.png' 
+        hero: 'images/category-banner/vertical-banner.png' 
     },
     // 2. Венециански
     { 
         slug: 'venetian', 
         title: 'Венециански щори', 
         desc: 'Класически алуминиеви хоризонтални щори. Прецизен контрол на светлината и лесна поддръжка.', 
-        hero: '/images/category-banner/venetian-banner.png'  
+        hero: 'images/category-banner/venetian-banner.png'  
     },
     // 3. Плисе
     { 
         slug: 'plise', 
         title: 'Плисе щори', 
         desc: 'Модерен дизайн с възможност за движение в двете посоки ("Ден и Нощ"). Идеални за нестандартни форми.', 
-        hero: '/images/category-banner/plise-banner.png' 
+        hero: 'images/category-banner/plise-banner.png' 
     },
     // 4. Дървени
     { 
         slug: 'wooden', 
         title: 'Дървени щори', 
         desc: 'Лукс и топлина от естествен материал. Предлагаме Басвуд и Бамбук в различни ширини (25мм, 50мм).', 
-        hero: '/images/wooden/wooden-3.png' 
+        hero: 'images/wooden/wooden-3.png' 
     },
     // 5. Римски (вкл. Делукс, Мини, Макс)
     { 
         slug: 'roman', 
         title: 'Римски щори', 
         desc: 'Текстилен уют за дома. Включва модели: Делукс, Мини, Макс и Макс Бокс.', 
-        hero: '/images/category-banner/roman-banner.png' 
+        hero: 'images/category-banner/roman-banner.png' 
     },
     // 6. Руло (вкл. Кутия, Водачи)
     { 
         slug: 'roller', 
         title: 'Руло щори', 
         desc: 'Изчистен дизайн за всеки интериор. Варианти: Стандарт, С кутия и водачи, Руло Макс.', 
-        hero: '/images/category-banner/roller-banner.png' 
+        hero: 'images/category-banner/roller-banner.png' 
     },
     // 7. Ден и Нощ (Зебра)
     { 
         slug: 'day-night', 
         title: 'Щори Ден и Нощ', 
         desc: 'Елегантни Зебра щори. Модели: Стандарт, С кутия и водачи, Макс Бокс.', 
-        hero: '/images/day-night/max/day-night-max-2.jpg'
+        hero: 'images/day-night/max/day-night-max-2.jpg'
     },
     // 8. Хармония
     { 
         slug: 'harmony', 
         title: 'Щора Хармония', 
         desc: 'Ефирна елегантност, съчетаваща функциите на перде и щора в едно.', 
-        hero: '/images/category-banner/harmony-banner.jpg' 
+        hero: 'images/category-banner/harmony-banner.jpg' 
     },
     // 9. Вертикални Ден и Нощ
     { 
         slug: 'vertical-day-night', 
         title: 'Вертикални Ден и Нощ', 
         desc: 'Иновация, съчетаваща вертикални ленти с ефекта на прозрачност и плътност.', 
-        hero: '/images/category-banner/vertical-day-night-banner.png' 
+        hero: 'images/category-banner/vertical-day-night-banner.png' 
     },
     // 10. Моторизирани
     { 
         slug: 'motorized', 
         title: 'Ел. Корнизи и Автоматизация', 
         desc: 'Умни решения с мотори Somfy и Motion за вашия комфорт. Управление с дистанционно или телефон.', 
-        hero: '/images/motorized/motorized-sample.png'
+        hero: 'images/motorized/motorized-sample.png'
     }
   ];
   return categories.map((category) => {
@@ -124,7 +124,7 @@ const { category, products: categoryProducts } = Astro.props;
                         <h3 class="text-xl font-bold text-slate-800 mb-2">{product.name}</h3>
                         <p class="text-slate-500 text-sm mb-6 grow">{product.shortDesc}</p>
                         
-                        <a href={`${base}/product/${product.id}`} class="w-full block text-center bg-slate-900 text-white py-3 rounded-lg hover:bg-blue-600 transition">
+                        <a href={`${base}product/${product.id}`} class="w-full block text-center bg-slate-900 text-white py-3 rounded-lg hover:bg-blue-600 transition">
                             Виж повече снимки
                         </a>
                     </div>

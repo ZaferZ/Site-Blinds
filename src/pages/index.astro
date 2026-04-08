@@ -39,7 +39,7 @@ const base = import.meta.env.BASE_URL;
   { 
     title: "Римски", 
     subtitle: "Делукс, Макс & Бокс", 
-    img: `${base}images/roman/roman-sample.jpg`	, 
+    img: `${base}images/roman/roman-sample.webp`, 
     link: "roman" 
   },
 
@@ -271,7 +271,7 @@ const slides = [
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             
             {models.map((item) => (
-                <a href={`${base}/models/${item.link}`} class="group relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <a href={`${base}models/${item.link}`} class="group relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                     
                     <img 
                         src={item.img} 

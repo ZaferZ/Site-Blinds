@@ -9,12 +9,12 @@ export const products = [
     shortDesc: 'Елегантно решение за големи прозорци и офиси.', //краткият описание
     description: 'Класически вертикални щори с текстилни и PVC ленти. Предлагат отличен контрол на светлината чрез прецизно завъртане на ламелите. Подходящи както за дома така и за бизнес пространства.!!! цената на щората се формира от сбора на сумите за релсов механизъм и текстил / pvc  лента.', //подробно описание
     images: [
-      "/images/vertical/vertical-gray.png",
-      "/images/vertical/vertical-orange.png",
-      "/images/vertical/vertical-gray2.jpg",
-      "/images/vertical/vertical-gray3.png",
-      "/images/vertical/vertical-office.jpg", 
-      "/images/vertical/vertical-beige.png"
+      "images/vertical/vertical-gray.png",
+      "images/vertical/vertical-orange.png",
+      "images/vertical/vertical-gray2.jpg",
+      "images/vertical/vertical-gray3.png",
+      "images/vertical/vertical-office.jpg", 
+      "images/vertical/vertical-beige.png"
     ],
     specs: {
       "Материал": "Антистатичен текстил / PVC",
@@ -31,11 +31,11 @@ export const products = [
     shortDesc: 'Практичен и икономичен начин за декориране на прозорците.', //краткият описание
     description: ' Венециански алуминиеви щори приложими във всички помещения на дома и офиса. Предлагат пълна дискретност и контрол на потока на светлината. Възможност за изпълнение в black out вариант.', //подробно описание
     images: [
-      "/images/venetian/venetian-1.png",
-      "/images/venetian/venetian-2.png",
-      "/images/venetian/venetian-3.png",
-      "/images/venetian/venetian-4.png",
-      "/images/venetian/venetian-5.png" 
+      "images/venetian/venetian-1.png",
+      "images/venetian/venetian-2.png",
+      "images/venetian/venetian-3.png",
+      "images/venetian/venetian-4.png",
+      "images/venetian/venetian-5.png" 
     ],
     specs: {
       "Материал": "Алуминий",
@@ -56,10 +56,10 @@ export const products = [
     shortDesc: 'Модерен и компактен избор за вашите прозорци.', 
     description: ' Плисе щори изработени от лек плат нагънат на хармоника. Те предлагат страхотен контрол на светлината като същевременно заемат минимално място. Предлагат се в различни варианти – от полупрозрачни до Blackout (пълно затъмняване).', 
     images: [
-      "/images/plise/normal/plise-1.png",
-      "/images/plise/normal/plise-2.png",
-      "/images/plise/normal/plise-3.png",
-      "/images/plise/normal/plise-4.png"
+      "images/plise/normal/plise-1.png",
+      "images/plise/normal/plise-2.png",
+      "images/plise/normal/plise-3.png",
+      "images/plise/normal/plise-4.png"
     ],
     specs: {
       "Материал": "Teкстил",
@@ -81,12 +81,12 @@ export const products = [
     shortDesc: 'Модерен и компактен избор за вашите прозорци', 
     description: 'Плисе щорите в рамка са идеално, модерно решение, предлагащи плътно прилепване и отлична термоизолация. Те се спускат/вдигат двупосочно, подходящи за наклонени прозорци , образувайки едно цяло с прозореца. ', 
     images: [
-      "/images/plise/perfectfit/plise-1.png",
-      "/images/plise/perfectfit/plise-2.png",
-      "/images/plise/perfectfit/plise-3.png",
-      "/images/plise/perfectfit/plise-4.png",
-      "/images/plise/perfectfit/plise-5.png",
-      "/images/plise/perfectfit/plise-6.png"
+      "images/plise/perfectfit/plise-1.png",
+      "images/plise/perfectfit/plise-2.png",
+      "images/plise/perfectfit/plise-3.png",
+      "images/plise/perfectfit/plise-4.png",
+      "images/plise/perfectfit/plise-5.png",
+      "images/plise/perfectfit/plise-6.png"
     ],
     specs: {
       "Материал": "Teкстил",
@@ -114,11 +114,11 @@ export const products = [
     shortDesc: 'Усещане за топлина и уют в помещенията..', 
     description: 'Дървените  щори са изборът на взискателни клиенти. Перфектно допълнение в интериора на домове, ресторанти и хотели. вграденият декоративен корниз придава още по-изтънчен вид на щората.', 
     images: [
-      "/images/wooden/wooden-1.png",
-      "/images/wooden/wooden-2.png",
-      "/images/wooden/wooden-3.png",
-      "/images/wooden/wooden-4.png",
-      "/images/wooden/wooden-5.png" 
+      "images/wooden/wooden-1.png",
+      "images/wooden/wooden-2.png",
+      "images/wooden/wooden-3.png",
+      "images/wooden/wooden-4.png",
+      "images/wooden/wooden-5.png" 
     ],
     specs: {
       "Материал": "Естествена дървесина / Бамбук",
@@ -142,12 +142,12 @@ export const products = [
     shortDesc: 'Щора, перде и завеса, всичко това в едно цяло.', 
     description: 'Вертикалните щори „ден и нощ“ съчетават ефирна прозрачност с текстурирана плътна материя. Тези щори позволяват свободно преминаване между лентите, без нужда от събиране.  Всяка лента може да се сваля и подменя или почиства индивидуално, което прави поддръжката бърза и лесна. Освен естетика перде щората предлага и отлична функционалност.', 
     images: [
-      "/images/vertical-day-night/vertical-day-night-1.jpg",
-      "/images/vertical-day-night/vertical-day-night-2.jpg",
-      "/images/vertical-day-night/vertical-day-night-3.jpg",
-      "/images/vertical-day-night/vertical-day-night-4.png",
-      "/images/vertical-day-night/vertical-day-night-5.jpg",
-      "/images/vertical-day-night/vertical-day-night-6.jpg" 
+      "images/vertical-day-night/vertical-day-night-1.jpg",
+      "images/vertical-day-night/vertical-day-night-2.jpg",
+      "images/vertical-day-night/vertical-day-night-3.jpg",
+      "images/vertical-day-night/vertical-day-night-4.png",
+      "images/vertical-day-night/vertical-day-night-5.jpg",
+      "images/vertical-day-night/vertical-day-night-6.jpg" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
@@ -171,11 +171,11 @@ export const products = [
     shortDesc: 'Дизайнерско решение за дома', 
     description: 'Щорите тип „Хармония“ ( „Двойна хармония“) представляват модерен и иновативен вид вътрешни щори, които съчетават функционалността на вертикалните щори с ефирността и стила на класическите пердета. Състоят се от вертикални ламели изработени от текстил с pvc пълнеж, които са съединени от ефирна, прозрачна материя (тюл) между тях. Меката, полупрозрачна материя филтрира светлината, омекотява я и осигурява видимост навън, като същевременно запазва уединението,', 
     images: [
-      "/images/harmony/harmony-1.jpg",
-      "/images/harmony/harmony-2.jpg",
-      "/images/harmony/harmony-3.jpg",
-      "/images/harmony/harmony-4.jpg",
-      "/images/harmony/harmony-5.jpg" 
+      "images/harmony/harmony-1.jpg",
+      "images/harmony/harmony-2.jpg",
+      "images/harmony/harmony-3.jpg",
+      "images/harmony/harmony-4.jpg",
+      "images/harmony/harmony-5.jpg" 
     ],
     specs: {
       "Материал": "Антистатичен текстил / PVC / Тюл",
@@ -193,11 +193,11 @@ export const products = [
     shortDesc: 'Модерна визия подходяща за всяко помещение с големи прозорци', 
     description: 'Ден и Нощ Max и Max box са висококачествени, усилени щори, специално проектирани за закриване на големи прозорци и витрини. Те използват система от два слоя текстил (редуващи се прозрачни и непрозрачни ивици) за контрол на светлината, монтират се на стена или таван и предлагат стилен завършек с разнообразни цветове на плата. Моделът е идеален за големи френски прозорци, витрини или плъзгащи се врати, където стандартните щори не биха били достатъчно здрави. Разликата между Мax и Мax box е в това, че във вариант Мax box механизма на щората е скрит в стилна касета изработена от алуминий.', 
     images: [
-      "/images/day-night/max/day-night-max-1.jpg",
-      "/images/day-night/max/day-night-max-2.jpg",
-      "/images/day-night/max/day-night-max-3.jpg",
-      "/images/day-night/max/day-night-max-4.jpg",
-      "/images/day-night/max/day-night-max-5.jpg" 
+      "images/day-night/max/day-night-max-1.jpg",
+      "images/day-night/max/day-night-max-2.jpg",
+      "images/day-night/max/day-night-max-3.jpg",
+      "images/day-night/max/day-night-max-4.jpg",
+      "images/day-night/max/day-night-max-5.jpg" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
@@ -220,12 +220,12 @@ export const products = [
     shortDesc: 'Функционалност и естетика в дома', 
     description: 'Щорите "Ден и Нощ" с кутия и водачи представляват иновативно и елегантно решение за контрол на светлината, съчетаващо функционалността на руло щорите с прецизността на венецианските щори. Системата с кутия и водачи осигурява плътно прилепване към прозореца и завършен вид. Горната част на щората е скрита в елегантна кутия изработена от алуминий. От двете страни на стъклодържача се монтират странични водачи, които придържат плата плътно до стъклото. Тази система елиминира страничните пролуки, през които би могла да влиза светлина и предотвратява провисването или люлеенето на щората при отваряне на прозореца.', 
     images: [
-      "/images/day-night/box/day-night-box-1.jpg",
-      "/images/day-night/box/day-night-box-2.jpg",
-      "/images/day-night/box/day-night-box-3.jpg",
-      "/images/day-night/box/day-night-box-4.jpg",
-      "/images/day-night/box/day-night-box-5.jpg",
-      "/images/day-night/box/day-night-box-6.jpg" 
+      "images/day-night/box/day-night-box-1.jpg",
+      "images/day-night/box/day-night-box-2.jpg",
+      "images/day-night/box/day-night-box-3.jpg",
+      "images/day-night/box/day-night-box-4.jpg",
+      "images/day-night/box/day-night-box-5.jpg",
+      "images/day-night/box/day-night-box-6.jpg" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
@@ -248,11 +248,11 @@ export const products = [
     shortDesc: 'Стабилност и завършен вид за големи пространства', 
     description: 'Руло щорите от сериите MAX, MAXI и MAX BOX са специализирани решения за по-големи остъклени площи и специфични интериорни нужди. Те се отличават с подсилени механизми и възможност за покриване на широки пространства, които стандартните модели не могат да обхванат. Налични са опции за пълно затъмнение (Blackout), термозащита и антибактериални покрития.', 
     images: [
-      "/images/roller/roll/roller-1.jpg",
-      "/images/roller/roll/roller-2.jpg",
-      "/images/roller/roll/roller-3.jpg",
-      "/images/roller/roll/roller-4.jpg",
-      "/images/roller/roll/roller-5.jpg" 
+      "images/roller/roll/roller-1.jpg",
+      "images/roller/roll/roller-2.jpg",
+      "images/roller/roll/roller-3.jpg",
+      "images/roller/roll/roller-4.jpg",
+      "images/roller/roll/roller-5.jpg" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
@@ -274,13 +274,13 @@ export const products = [
     shortDesc: 'Идеален избор за всяко помещение', 
     description: 'Руло щорите с кутия и водачи са най-модерното решение за PVC и алуминиева дограма. Те се монтират директно върху стъклопакета, като алуминиева кутия скрива плата, а страничните водачи прилепват плътно, предотвратявайки пролуки, осигурявайки перфектно засенчване и прибиране.', 
     images: [
-      "/images/roller/box/roller-box-1.jpg",
-      "/images/roller/box/roller-box-2.jpg",
-      "/images/roller/box/roller-box-3.jpg",
-      "/images/roller/box/roller-box-4.jpg",
-      "/images/roller/box/roller-box-5.jpg",
-      "/images/roller/box/roller-box-6.jpg",
-      "/images/roller/box/roller-box-7.png" 
+      "images/roller/box/roller-box-1.jpg",
+      "images/roller/box/roller-box-2.jpg",
+      "images/roller/box/roller-box-3.jpg",
+      "images/roller/box/roller-box-4.jpg",
+      "images/roller/box/roller-box-5.jpg",
+      "images/roller/box/roller-box-6.jpg",
+      "images/roller/box/roller-box-7.png" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
@@ -303,12 +303,12 @@ export const products = [
     shortDesc: 'Придайте романтичен и топъл вид на дома си', 
     description: 'Римските щори са стилна и компактна алтернатива на класическите завеси, подходящи за всяко помещение в дома. Съчетавайки луксозни платове с безупречна изработка те добавят изисканост, топлина и уют. Богатият избор на цветове, десени и подплати - включително blackout - улеснява съчетанието с всеки интериор. Предлагаме изработка в mini, max и max box вариант.', 
     images: [
-      "/images/roman/roman-1.jpg",
-      "/images/roman/roman-2.jpg",
-      "/images/roman/roman-3.jpg",
-      "/images/roman/roman-4.jpg",
-      "/images/roman/roman-5.jpg",
-      "/images/roman/roman-6.jpg" 
+      "images/roman/roman-1.jpg",
+      "images/roman/roman-2.jpg",
+      "images/roman/roman-3.jpg",
+      "images/roman/roman-4.jpg",
+      "images/roman/roman-5.jpg",
+      "images/roman/roman-6.jpg" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
@@ -354,8 +354,8 @@ export const products = [
   
   // Не забравяй да добавиш реални снимки тук
   images: [
-    "/images/motorized/motorized-1.jpg",
-    "/images/motorized/motorized-2.jpg"
+    "images/motorized/motorized-1.jpg",
+    "images/motorized/motorized-2.jpg"
   ]
 }
   // Можеш да добавиш още продукти тук...
