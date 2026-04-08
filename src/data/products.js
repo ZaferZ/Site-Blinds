@@ -225,7 +225,7 @@ export const products = [
       "images/day-night/box/day-night-box-3.jpg",
       "images/day-night/box/day-night-box-4.jpg",
       "images/day-night/box/day-night-box-5.jpg",
-      "images/day-night/box/day-night-box-6.jpg" 
+      "images/day-night/box/day-night-box-6.png" 
     ],
     specs: {
       "Материал": "Антистатичен текстил",
